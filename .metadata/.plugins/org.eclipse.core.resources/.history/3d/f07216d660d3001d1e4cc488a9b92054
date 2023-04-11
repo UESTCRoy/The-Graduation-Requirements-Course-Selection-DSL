@@ -1,0 +1,66 @@
+	/*
+ * 
+ */
+package grdsl.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class CourseSelectionItemSemanticEditPolicy extends grdsl.diagram.edit.policies.GrdslBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public CourseSelectionItemSemanticEditPolicy() {
+				super(grdsl.diagram.providers.GrdslElementTypes.CourseSelection_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (grdsl.diagram.providers.GrdslElementTypes.Student_2001 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.StudentCreateCommand(req));
+}
+		if (grdsl.diagram.providers.GrdslElementTypes.DegreeProgram_2002 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.DegreeProgramCreateCommand(req));
+}
+		if (grdsl.diagram.providers.GrdslElementTypes.Course_2003 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.CourseCreateCommand(req));
+}
+		if (grdsl.diagram.providers.GrdslElementTypes.Department_2004 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.DepartmentCreateCommand(req));
+}
+		if (grdsl.diagram.providers.GrdslElementTypes.Teacher_2005 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.TeacherCreateCommand(req));
+}
+		if (grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_2006 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.GraduationRequirementCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

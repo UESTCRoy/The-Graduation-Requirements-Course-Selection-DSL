@@ -1,0 +1,183 @@
+
+/*
+ * 
+ */
+package grdsl.diagram.part;
+
+/**
+ * @generated
+ */
+public class GrdslPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(grdsl.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createCourse1CreationTool());
+paletteContainer.add(createDegreeProgram2CreationTool());
+paletteContainer.add(createDepartment3CreationTool());
+paletteContainer.add(createGraduationRequirement4CreationTool());
+paletteContainer.add(createStudent5CreationTool());
+paletteContainer.add(createTeacher6CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(grdsl.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createCourses1CreationTool());
+paletteContainer.add(createDepartment2CreationTool());
+paletteContainer.add(createDesiredDegreeProgram3CreationTool());
+paletteContainer.add(createPrerequisites4CreationTool());
+paletteContainer.add(createRequiredCourses5CreationTool());
+paletteContainer.add(createSelectedCourses6CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCourse1CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(grdsl.diagram.providers.GrdslElementTypes.Course_2003);
+types.add(grdsl.diagram.providers.GrdslElementTypes.Course_3002);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(grdsl.diagram.part.Messages.Course1CreationTool_title, grdsl.diagram.part.Messages.Course1CreationTool_desc, types);
+				 entry.setId("createCourse1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.Course_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDegreeProgram2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(grdsl.diagram.part.Messages.DegreeProgram2CreationTool_title, grdsl.diagram.part.Messages.DegreeProgram2CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.DegreeProgram_2002));
+				 entry.setId("createDegreeProgram2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.DegreeProgram_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDepartment3CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(grdsl.diagram.part.Messages.Department3CreationTool_title, grdsl.diagram.part.Messages.Department3CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.Department_2004));
+				 entry.setId("createDepartment3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.Department_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createGraduationRequirement4CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_3001);
+types.add(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_2006);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(grdsl.diagram.part.Messages.GraduationRequirement4CreationTool_title, grdsl.diagram.part.Messages.GraduationRequirement4CreationTool_desc, types);
+				 entry.setId("createGraduationRequirement4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createStudent5CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(grdsl.diagram.part.Messages.Student5CreationTool_title, grdsl.diagram.part.Messages.Student5CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.Student_2001));
+				 entry.setId("createStudent5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.Student_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createTeacher6CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(grdsl.diagram.providers.GrdslElementTypes.Teacher_3003);
+types.add(grdsl.diagram.providers.GrdslElementTypes.Teacher_2005);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(grdsl.diagram.part.Messages.Teacher6CreationTool_title, grdsl.diagram.part.Messages.Teacher6CreationTool_desc, types);
+				 entry.setId("createTeacher6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.Teacher_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCourses1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(grdsl.diagram.part.Messages.Courses1CreationTool_title, grdsl.diagram.part.Messages.Courses1CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.TeacherCourses_4006));
+				 entry.setId("createCourses1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.TeacherCourses_4006));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDepartment2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(grdsl.diagram.part.Messages.Department2CreationTool_title, grdsl.diagram.part.Messages.Department2CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.CourseDepartment_4002));
+				 entry.setId("createDepartment2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.CourseDepartment_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDesiredDegreeProgram3CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(grdsl.diagram.part.Messages.DesiredDegreeProgram3CreationTool_title, grdsl.diagram.part.Messages.DesiredDegreeProgram3CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.StudentDesiredDegreeProgram_4003));
+				 entry.setId("createDesiredDegreeProgram3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.StudentDesiredDegreeProgram_4003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createPrerequisites4CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(grdsl.diagram.part.Messages.Prerequisites4CreationTool_title, grdsl.diagram.part.Messages.Prerequisites4CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.CoursePrerequisites_4001));
+				 entry.setId("createPrerequisites4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.CoursePrerequisites_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createRequiredCourses5CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(grdsl.diagram.part.Messages.RequiredCourses5CreationTool_title, grdsl.diagram.part.Messages.RequiredCourses5CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirementRequiredCourses_4005));
+				 entry.setId("createRequiredCourses5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirementRequiredCourses_4005));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createSelectedCourses6CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(grdsl.diagram.part.Messages.SelectedCourses6CreationTool_title, grdsl.diagram.part.Messages.SelectedCourses6CreationTool_desc, java.util.Collections.singletonList(grdsl.diagram.providers.GrdslElementTypes.StudentSelectedCourses_4004));
+				 entry.setId("createSelectedCourses6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(grdsl.diagram.providers.GrdslElementTypes.getImageDescriptor(grdsl.diagram.providers.GrdslElementTypes.StudentSelectedCourses_4004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

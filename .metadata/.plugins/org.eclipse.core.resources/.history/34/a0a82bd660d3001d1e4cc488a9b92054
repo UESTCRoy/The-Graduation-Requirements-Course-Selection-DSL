@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package grdsl.diagram.providers;
+
+/**
+ * @generated
+ */
+public class GrdslEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public GrdslEditPartProvider() {
+		super(new grdsl.diagram.edit.parts.GrdslEditPartFactory(), 			grdsl.diagram.part.GrdslVisualIDRegistry.TYPED_INSTANCE, 			grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

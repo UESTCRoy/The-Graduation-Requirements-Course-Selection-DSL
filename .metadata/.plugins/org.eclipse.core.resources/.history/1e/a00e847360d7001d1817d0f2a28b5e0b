@@ -1,0 +1,138 @@
+@lazy
+pre {
+    var numCourses = Course.all.size();
+}
+
+context Student {
+    constraint ValidName {
+        check: self.name.isDefined() and self.name.trim().size() > 0
+        message: "Student name must not be empty"
+
+        fix {
+            title: "Set name to 'Unknown'"
+            do {
+                self.name = 'Unknown';
+            }
+        }
+    }
+
+    constraint ValidGradeLevel {
+        check: self.gradeLevel >= 1 and self.gradeLevel <= 12
+        message: "Student grade level must be between 1 and 12"
+    }
+    
+    constraint ValidCreditHours {
+        check: self.desiredDegreeProgram.graduationRequirements.forAll(req |
+            req.minimumCreditHours <= self.selectedCourses.select(c | req.requiredCourses.includes(c) or req.requiredCourseCategories.exists(cat | c.category == cat)).creditHours.sum()
+        )
+        message: "The total credit hours of the selected courses must be equal to or greater than the minimum credit hours required for each GraduationRequirement"
+    }
+    
+    constraint PrerequisitesSelected {
+        check: self.selectedCourses.forAll(c | self.selectedCourses.exists(p | p.prerequisites.includes(c)))
+        message: "If a student selects a course, they must also select the prerequisite courses"
+    }
+}
+
+context Course {
+    @lazy
+    constraint TooManyPrerequisites {
+        guard: self.prerequisites.isNotEmpty()
+        
+        check {
+            var tooMany = self.prerequisites.size() > 5;
+            if (tooMany) {
+                println("Checking too many prerequisites for " + self.name);
+            }
+            return not tooMany;
+        }
+        
+        message: "A course cannot have more than 5 prerequisites"
+
+        fix {
+            title: "Remove extra prerequisites"
+            do {
+                self.prerequisites.removeAll(self.prerequisites.subList(5, self.prerequisites.size()));
+            }
+        }
+    }
+    
+    constraint ValidCreditHours {
+        check: self.creditHours >= 1 and self.creditHours <= 6
+        message: "Course credit hours must be between 1 and 6"
+    }
+
+    constraint PrerequisitesNotIncludeSelf {
+        check: not self.prerequisites.includes(self)
+        message: "A course cannot be a prerequisite of itself"
+    }
+}
+
+context GraduationRequirement {
+    @lazy
+    constraint ValidRequirements {
+        check: self.requiredCourses.isNotEmpty() or self.requiredCourseCategories.isNotEmpty()
+        message: "A GraduationRequirement must have at least one required course or one required course category"
+    }
+}
+
+context Department {
+    constraint ValidName {
+        check: self.name.isDefined() and self.name.trim().size() > 0
+        message: "Department name must not be empty"
+
+        fix {
+            title: "Set name to 'Unknown'"
+            do {
+                self.name = 'Unknown';
+            }
+        }
+    }
+
+    constraint AtLeastOneTeacher {
+        check: self.teachers.size() > 0
+        message: "A department must have at least one teacher"
+    }
+}
+
+context DegreeProgram {
+    constraint ValidName {
+        check: self.name.isDefined() and self.name.trim().size() > 0
+        message: "DegreeProgram name must not be empty"
+
+        fix {
+            title: "Set name to 'Unknown'"
+            do {
+                self.name = 'Unknown';
+            }
+        }
+    }
+    
+    constraint AtLeastOneGraduationRequirement {
+        check: self.graduationRequirements.size() > 0
+        message: "A DegreeProgram must have at least one GraduationRequirement"
+    }
+}
+
+context Teacher {
+    constraint ValidName {
+        check: self.name.isDefined() and self.name.trim().size() > 0
+        message: "Teacher name must not be empty"
+
+        fix {
+            title: "Set name to 'Unknown'"
+            do {
+                self.name = 'Unknown';
+            }
+        }
+    }
+
+    constraint BelongsToDepartment {
+        check: grdsl::Department.all.exists(d | d.teachers.includes(self))
+        message: "A teacher must belong to a department"
+    }
+}
+
+post {
+    ("# Courses="+numCourses).println();
+}

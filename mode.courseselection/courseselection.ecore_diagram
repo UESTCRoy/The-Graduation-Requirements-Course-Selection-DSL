@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_uLXC4NcYEe27MLAionfr7Q" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_uRHFkNcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRITsNcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI6wNcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI6wdcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI6wtcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI6w9cYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI6xNcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI6xdcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI6xtcYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI6x9cYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI6yNcYEe27MLAionfr7Q"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//Course"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRHFkdcYEe27MLAionfr7Q" x="306" y="504"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRI6ydcYEe27MLAionfr7Q" type="2005" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRI6y9cYEe27MLAionfr7Q" type="5005"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI6zNcYEe27MLAionfr7Q" type="7011">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI6zdcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI6ztcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI6z9cYEe27MLAionfr7Q" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI60NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI60dcYEe27MLAionfr7Q"/>
+    </children>
+    <element xmi:type="ecore:EEnum" href="courseselection.ecore#//CourseCategory"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRI6ytcYEe27MLAionfr7Q" x="522" y="387"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRI60tcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRI61NcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI61dcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI61tcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI619cYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI62NcYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI62dcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI62tcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRI629cYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRI63NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRI63dcYEe27MLAionfr7Q"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//Student"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRI609cYEe27MLAionfr7Q" x="27" y="189"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRI63tcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRJh0NcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh0dcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh0tcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh09cYEe27MLAionfr7Q"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_3jg1gNdOEe2AR66tkeMGVw" value="0.35365853658536583"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh1NcYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh1dcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh1tcYEe27MLAionfr7Q"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_3jhckNdOEe2AR66tkeMGVw" value="0.21951219512195122"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh19cYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh2NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh2dcYEe27MLAionfr7Q"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_3jiDoNdOEe2AR66tkeMGVw" value="0.23170731707317074"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//DegreeProgram"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRI639cYEe27MLAionfr7Q" x="36" y="369"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRJh2tcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRJh3NcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh3dcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh3tcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh39cYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh4NcYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh4dcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh4tcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh49cYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh5NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh5dcYEe27MLAionfr7Q"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//GraduationRequirement"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRJh29cYEe27MLAionfr7Q" y="504"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRJh5tcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRJh6NcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh6dcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh6tcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh69cYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh7NcYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh7dcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh7tcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh79cYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh8NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh8dcYEe27MLAionfr7Q"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//Teacher"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRJh59cYEe27MLAionfr7Q" x="387" y="315"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRJh8tcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRJh9NcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh9dcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh9tcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh99cYEe27MLAionfr7Q"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_8TFjANdOEe2AR66tkeMGVw" value="0.2878787878787879"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh-NcYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh-dcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh-tcYEe27MLAionfr7Q"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_8TGKENdOEe2AR66tkeMGVw" value="0.18181818181818182"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRJh-9cYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRJh_NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRJh_dcYEe27MLAionfr7Q"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_8TGKEddOEe2AR66tkeMGVw" value="0.2878787878787879"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//Department"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRJh89cYEe27MLAionfr7Q" x="531" y="198"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uRJh_tcYEe27MLAionfr7Q" type="2001" fontName=".AppleSystemUIFont">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uRKI4NcYEe27MLAionfr7Q" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRKI4dcYEe27MLAionfr7Q" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRKI4tcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRKI49cYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRKI5NcYEe27MLAionfr7Q" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRKI5dcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRKI5tcYEe27MLAionfr7Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uRKI59cYEe27MLAionfr7Q" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uRKI6NcYEe27MLAionfr7Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uRKI6dcYEe27MLAionfr7Q"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="courseselection.ecore#//CourseSelection"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRJh_9cYEe27MLAionfr7Q" x="315" y="198"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_uLXC4dcYEe27MLAionfr7Q"/>
+  <element xmi:type="ecore:EPackage" href="courseselection.ecore#/"/>
+</notation:Diagram>

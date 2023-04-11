@@ -1,0 +1,147 @@
+/*
+ * 
+ */
+package grdsl.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class GrdslEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+				
+	case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CourseSelectionEditPart(view);
+									
+	case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.StudentEditPart(view);
+					
+	case grdsl.diagram.edit.parts.StudentNameEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.StudentNameEditPart(view);
+									
+	case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DegreeProgramEditPart(view);
+					
+	case grdsl.diagram.edit.parts.DegreeProgramNameEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DegreeProgramNameEditPart(view);
+									
+	case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CourseEditPart(view);
+					
+	case grdsl.diagram.edit.parts.CourseNameEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CourseNameEditPart(view);
+									
+	case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DepartmentEditPart(view);
+					
+	case grdsl.diagram.edit.parts.DepartmentNameEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DepartmentNameEditPart(view);
+									
+	case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.TeacherEditPart(view);
+					
+	case grdsl.diagram.edit.parts.TeacherNameEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.TeacherNameEditPart(view);
+									
+	case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.GraduationRequirementEditPart(view);
+					
+	case grdsl.diagram.edit.parts.GraduationRequirementNameEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.GraduationRequirementNameEditPart(view);
+									
+	case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.GraduationRequirement2EditPart(view);
+					
+	case grdsl.diagram.edit.parts.GraduationRequirementName2EditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.GraduationRequirementName2EditPart(view);
+									
+	case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.Course2EditPart(view);
+					
+	case grdsl.diagram.edit.parts.CourseName2EditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CourseName2EditPart(view);
+									
+	case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.Teacher2EditPart(view);
+					
+	case grdsl.diagram.edit.parts.TeacherName2EditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.TeacherName2EditPart(view);
+								
+	case grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart(view);
+
+	case grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart(view);
+
+	case grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart(view);
+									
+	case grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CoursePrerequisitesEditPart(view);
+					
+	case grdsl.diagram.edit.parts.CoursePrerequisitesExternalLabelEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CoursePrerequisitesExternalLabelEditPart(view);
+
+									
+	case grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CourseDepartmentEditPart(view);
+					
+	case grdsl.diagram.edit.parts.CourseDepartmentExternalLabelEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.CourseDepartmentExternalLabelEditPart(view);
+
+									
+	case grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart(view);
+					
+	case grdsl.diagram.edit.parts.StudentDesiredDegreeProgramExternalLabelEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.StudentDesiredDegreeProgramExternalLabelEditPart(view);
+
+									
+	case grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart(view);
+					
+	case grdsl.diagram.edit.parts.StudentSelectedCoursesExternalLabelEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.StudentSelectedCoursesExternalLabelEditPart(view);
+
+									
+	case grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart(view);
+					
+	case grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesExternalLabelEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesExternalLabelEditPart(view);
+
+									
+	case grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.TeacherCoursesEditPart(view);
+					
+	case grdsl.diagram.edit.parts.TeacherCoursesExternalLabelEditPart.VISUAL_ID:
+		return new grdsl.diagram.edit.parts.TeacherCoursesExternalLabelEditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

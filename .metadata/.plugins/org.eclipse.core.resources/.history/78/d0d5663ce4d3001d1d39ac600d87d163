@@ -1,0 +1,26 @@
+<context type="grdsl::Course">
+    constraint ValidCreditHours {
+        check: self.creditHours > 0
+        message: "Credit hours must be a positive number"
+    }
+    
+    constraint NoSelfPrerequisite {
+        check: not self.prerequisites.includes(self)
+        message: "A course cannot be a prerequisite of itself"
+    }
+</context>
+
+<context type="grdsl::Student">
+    constraint ValidGradeLevel {
+        check: self.gradeLevel >= 1 and self.gradeLevel <= 12
+        message: "Grade level must be between 1 and 12"
+    }
+</context>
+
+<context type="grdsl::GraduationRequirement">
+    constraint ValidMinimumCreditHours {
+        check: self.minimumCreditHours > 0
+        message: "Minimum credit hours must be a positive number"
+    }
+</context>
+</evl>

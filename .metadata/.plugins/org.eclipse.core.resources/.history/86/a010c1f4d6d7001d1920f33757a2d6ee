@@ -1,0 +1,32 @@
+<project name="epsilon-ant-tasks" default="transform" xmlns:epsilon="http://www.eclipse.org/epsilon/ant">
+
+    <!-- Set up Epsilon Ant tasks -->
+    <typedef resource="org/eclipse/epsilon/ant/taskdefs.xml" classpath="path/to/epsilon-ant.jar" />
+
+    <!-- Set up the classpath -->
+    <path id="epsilon.classpath">
+        <fileset dir="path/to/lib">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <target name="transform">
+        <!-- Execute the ETL transformation -->
+        <epsilon.etl src="path/to/your/etl/transformation.etl">
+            <model ref="sourceModel" />
+            <model ref="targetModel" />
+            <classpath refid="epsilon.classpath" />
+        </epsilon.etl>
+
+        <!-- Execute the EGL transformation -->
+        <epsilon.egl src="path/to/your/egl/template.egl">
+            <model ref="targetModel" />
+            <target target="path/to/output/file.html" />
+            <classpath refid="epsilon.classpath" />
+        </epsilon.egl>
+    </target>
+
+    <!-- Define the source and target models -->
+    <epsilon.emf model="sourceModel" modelFile="path/to/your/source/model.xmi" metamodelFile="path/to/your/source/metamodel.ecore" />
+    <epsilon.emf model="targetModel" modelFile="path/to/your/target/model.xmi" metamodelFile="path/to/your/target/metamodel.ecore" />
+</project>

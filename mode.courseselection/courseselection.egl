@@ -1,0 +1,12 @@
+[% for (t in tables) { %]
+<h1>Table: [%= t.id %]</h1>
+<table border="1">
+
+[% for (r in t.rows) { %]
+<tr>
+[% for (c in r.cells) { %]<td>[%= c.content %]</td>[% } %]
+</tr>
+[% } %]
+
+</table>
+[% } %]

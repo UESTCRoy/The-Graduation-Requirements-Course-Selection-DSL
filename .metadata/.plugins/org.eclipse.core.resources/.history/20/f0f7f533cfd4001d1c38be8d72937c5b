@@ -1,0 +1,63 @@
+rule TransformCoursesToTable 
+    transform c : grdsl!Course
+    to t : StructuredContent!Table {
+        t.id = "course_" + c.courseID;
+        t.createRow(Sequence{"Course Name", "Description", "Credit Hours", "Teacher", "Department"});
+        t.createRow(Sequence{c.name, c.description, c.creditHours, c.teacher.name, c.department.name});
+    }
+
+
+rule TransformStudentsToTable
+    transform s : grdsl!Student
+    to t : StructuredContent!Table {
+        t.id = "student_" + s.name;
+        t.createRow(Sequence{"Name", "Grade Level", "Academic Interests", "Desired Degree Program", "Selected Courses"});
+        t.createRow(Sequence{s.name, s.gradeLevel, s.academicInterests.join(", "), s.desiredDegreeProgram.name, s.selectedCourses.collect(c | c.name).join(", ")});
+    }
+
+
+rule TransformDegreeProgramsToTable
+    transform dp : grdsl!DegreeProgram
+    to t : StructuredContent!Table {
+        t.id = "degree_program_" + dp.name;
+        t.createRow(Sequence{"Name", "Description", "Graduation Requirements"});
+        t.createRow(Sequence{dp.name, dp.description, dp.graduationRequirements.collect(r | r.name).join(", ")});
+    }
+
+
+rule TransformGraduationRequirementsToTable 
+    transform r : grdsl!GraduationRequirement
+    to t : StructuredContent!Table {
+        t.id = "graduation_requirement_" + r.name;
+        t.createRow(Sequence{"Name", "Minimum Credit Hours", "Required Courses", "Required Course Categories"});
+        t.createRow(Sequence{r.name, r.minimumCreditHours, r.requiredCourses.collect(c | c.name).join(", "), r.requiredCourseCategories.collect(c | c.toString()).join(", ")});
+    }
+
+
+rule TransformTeachersToTable
+    transform t : grdsl!Teacher
+    to table : StructuredContent!Table {
+        table.id = "teacher_" + t.name;
+        table.createRow(Sequence{"Name", "Courses"});
+        table.createRow(Sequence{t.name, t.courses.collect(c | c.name).join(", ")});
+    }
+
+
+rule TransformDepartmentsToTable 
+    transform d : grdsl!Department
+    to t : StructuredContent!Table {
+        t.id = "department_" + d.name;
+        t.createRow(Sequence{"Name", "Courses", "Teachers"});
+        t.createRow(Sequence{d.name, d.courses.collect(c | c.name).join(", "), d.teachers.collect(t | t.name).join(", ")});
+    }
+
+
+operation StructuredContent!Table createRow(cells : Sequence) {
+    var row : new StructuredContent!Row;
+    for (c in cells) {
+        var cell : new StructuredContent!Cell;
+        cell.content = c + "";
+        row.cells.add(cell);
+    }
+    self.rows.add(row);
+}

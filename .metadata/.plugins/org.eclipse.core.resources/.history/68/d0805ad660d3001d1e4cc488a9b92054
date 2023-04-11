@@ -1,0 +1,715 @@
+	/*
+ * 
+ */
+package grdsl.diagram.part;
+
+	/**
+ * @generated
+ */
+public class GrdslDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+		case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+	return getCourseSelection_1000SemanticChildren(view);
+case grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart.VISUAL_ID:
+	return getDegreeProgramDegreeProgramGraduationRequirementsCompartment_7001SemanticChildren(view);
+case grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart.VISUAL_ID:
+	return getDepartmentDepartmentCoursesCompartment_7002SemanticChildren(view);
+case grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart.VISUAL_ID:
+	return getDepartmentDepartmentTeachersCompartment_7003SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslNodeDescriptor> getCourseSelection_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+grdsl.CourseSelection modelElement = (grdsl.CourseSelection) view.getElement();
+	java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getStudent().iterator(); it.hasNext();) {
+		grdsl.Student childElement = (grdsl.Student) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getDegreePrograms().iterator(); it.hasNext();) {
+		grdsl.DegreeProgram childElement = (grdsl.DegreeProgram) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getAllCourses().iterator(); it.hasNext();) {
+		grdsl.Course childElement = (grdsl.Course) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getDepartments().iterator(); it.hasNext();) {
+		grdsl.Department childElement = (grdsl.Department) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getTeachers().iterator(); it.hasNext();) {
+		grdsl.Teacher childElement = (grdsl.Teacher) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getGraduationRequirements().iterator(); it.hasNext();) {
+		grdsl.GraduationRequirement childElement = (grdsl.GraduationRequirement) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslNodeDescriptor> getDegreeProgramDegreeProgramGraduationRequirementsCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+grdsl.DegreeProgram modelElement = (grdsl.DegreeProgram) containerView.getElement();
+	java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getGraduationRequirements().iterator(); it.hasNext();) {
+		grdsl.GraduationRequirement childElement = (grdsl.GraduationRequirement) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslNodeDescriptor> getDepartmentDepartmentCoursesCompartment_7002SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+grdsl.Department modelElement = (grdsl.Department) containerView.getElement();
+	java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCourses().iterator(); it.hasNext();) {
+		grdsl.Course childElement = (grdsl.Course) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslNodeDescriptor> getDepartmentDepartmentTeachersCompartment_7003SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+grdsl.Department modelElement = (grdsl.Department) containerView.getElement();
+	java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getTeachers().iterator(); it.hasNext();) {
+		grdsl.Teacher childElement = (grdsl.Teacher) it.next();
+					int visualID = grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID) {
+	result.add(new grdsl.diagram.part.GrdslNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+		case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+	return getCourseSelection_1000ContainedLinks(view);
+case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+	return getStudent_2001ContainedLinks(view);
+case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+	return getDegreeProgram_2002ContainedLinks(view);
+case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+	return getCourse_2003ContainedLinks(view);
+case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+	return getDepartment_2004ContainedLinks(view);
+case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+	return getTeacher_2005ContainedLinks(view);
+case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+	return getGraduationRequirement_2006ContainedLinks(view);
+case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+	return getGraduationRequirement_3001ContainedLinks(view);
+case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+	return getCourse_3002ContainedLinks(view);
+case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+	return getTeacher_3003ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+		case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+	return getStudent_2001IncomingLinks(view);
+case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+	return getDegreeProgram_2002IncomingLinks(view);
+case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+	return getCourse_2003IncomingLinks(view);
+case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+	return getDepartment_2004IncomingLinks(view);
+case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+	return getTeacher_2005IncomingLinks(view);
+case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+	return getGraduationRequirement_2006IncomingLinks(view);
+case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+	return getGraduationRequirement_3001IncomingLinks(view);
+case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+	return getCourse_3002IncomingLinks(view);
+case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+	return getTeacher_3003IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+		case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+	return getStudent_2001OutgoingLinks(view);
+case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+	return getDegreeProgram_2002OutgoingLinks(view);
+case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+	return getCourse_2003OutgoingLinks(view);
+case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+	return getDepartment_2004OutgoingLinks(view);
+case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+	return getTeacher_2005OutgoingLinks(view);
+case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+	return getGraduationRequirement_2006OutgoingLinks(view);
+case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+	return getGraduationRequirement_3001OutgoingLinks(view);
+case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+	return getCourse_3002OutgoingLinks(view);
+case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+	return getTeacher_3003OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourseSelection_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getStudent_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Student modelElement = (grdsl.Student) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Student_DesiredDegreeProgram_4003(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Student_SelectedCourses_4004(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getDegreeProgram_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourse_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Course modelElement = (grdsl.Course) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Course_Prerequisites_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Course_Department_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getDepartment_2004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getTeacher_2005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Teacher modelElement = (grdsl.Teacher) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Teacher_Courses_4006(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getGraduationRequirement_2006ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.GraduationRequirement modelElement = (grdsl.GraduationRequirement) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getGraduationRequirement_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.GraduationRequirement modelElement = (grdsl.GraduationRequirement) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourse_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Course modelElement = (grdsl.Course) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Course_Prerequisites_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Course_Department_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getTeacher_3003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Teacher modelElement = (grdsl.Teacher) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Teacher_Courses_4006(modelElement));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getStudent_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getDegreeProgram_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.DegreeProgram modelElement = (grdsl.DegreeProgram) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Student_DesiredDegreeProgram_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourse_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Course modelElement = (grdsl.Course) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Course_Prerequisites_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Student_SelectedCourses_4004(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Teacher_Courses_4006(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getDepartment_2004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Department modelElement = (grdsl.Department) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Course_Department_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getTeacher_2005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getGraduationRequirement_2006IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getGraduationRequirement_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourse_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Course modelElement = (grdsl.Course) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Course_Prerequisites_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Student_SelectedCourses_4004(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Teacher_Courses_4006(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getTeacher_3003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getStudent_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Student modelElement = (grdsl.Student) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Student_DesiredDegreeProgram_4003(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Student_SelectedCourses_4004(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getDegreeProgram_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourse_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Course modelElement = (grdsl.Course) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Course_Prerequisites_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Course_Department_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getDepartment_2004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getTeacher_2005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Teacher modelElement = (grdsl.Teacher) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Teacher_Courses_4006(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getGraduationRequirement_2006OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.GraduationRequirement modelElement = (grdsl.GraduationRequirement) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getGraduationRequirement_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.GraduationRequirement modelElement = (grdsl.GraduationRequirement) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getCourse_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Course modelElement = (grdsl.Course) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Course_Prerequisites_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Course_Department_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getTeacher_3003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	grdsl.Teacher modelElement = (grdsl.Teacher) view.getElement();
+		java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Teacher_Courses_4006(modelElement));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingFeatureModelFacetLinks_Course_Prerequisites_4001(grdsl.Course target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == grdsl.GrdslPackage.eINSTANCE.getCourse_Prerequisites()) {
+	result.add(new grdsl.diagram.part.GrdslLinkDescriptor(setting.getEObject(), target, grdsl.diagram.providers.GrdslElementTypes.CoursePrerequisites_4001, grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingFeatureModelFacetLinks_Course_Department_4002(grdsl.Department target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == grdsl.GrdslPackage.eINSTANCE.getCourse_Department()) {
+	result.add(new grdsl.diagram.part.GrdslLinkDescriptor(setting.getEObject(), target, grdsl.diagram.providers.GrdslElementTypes.CourseDepartment_4002, grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingFeatureModelFacetLinks_Student_DesiredDegreeProgram_4003(grdsl.DegreeProgram target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == grdsl.GrdslPackage.eINSTANCE.getStudent_DesiredDegreeProgram()) {
+	result.add(new grdsl.diagram.part.GrdslLinkDescriptor(setting.getEObject(), target, grdsl.diagram.providers.GrdslElementTypes.StudentDesiredDegreeProgram_4003, grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingFeatureModelFacetLinks_Student_SelectedCourses_4004(grdsl.Course target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == grdsl.GrdslPackage.eINSTANCE.getStudent_SelectedCourses()) {
+	result.add(new grdsl.diagram.part.GrdslLinkDescriptor(setting.getEObject(), target, grdsl.diagram.providers.GrdslElementTypes.StudentSelectedCourses_4004, grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(grdsl.Course target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement_RequiredCourses()) {
+	result.add(new grdsl.diagram.part.GrdslLinkDescriptor(setting.getEObject(), target, grdsl.diagram.providers.GrdslElementTypes.GraduationRequirementRequiredCourses_4005, grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingFeatureModelFacetLinks_Teacher_Courses_4006(grdsl.Course target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == grdsl.GrdslPackage.eINSTANCE.getTeacher_Courses()) {
+	result.add(new grdsl.diagram.part.GrdslLinkDescriptor(setting.getEObject(), target, grdsl.diagram.providers.GrdslElementTypes.TeacherCourses_4006, grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+		
+	/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingFeatureModelFacetLinks_Course_Prerequisites_4001(grdsl.Course source) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getPrerequisites().iterator(); destinations.hasNext();) {
+		grdsl.Course destination = (grdsl.Course) destinations.next();
+		result.add(new grdsl.diagram.part.GrdslLinkDescriptor(source, destination, grdsl.diagram.providers.GrdslElementTypes.CoursePrerequisites_4001, grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingFeatureModelFacetLinks_Course_Department_4002(grdsl.Course source) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		grdsl.Department destination = source.getDepartment();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new grdsl.diagram.part.GrdslLinkDescriptor(source, destination, grdsl.diagram.providers.GrdslElementTypes.CourseDepartment_4002, grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingFeatureModelFacetLinks_Student_DesiredDegreeProgram_4003(grdsl.Student source) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		grdsl.DegreeProgram destination = source.getDesiredDegreeProgram();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new grdsl.diagram.part.GrdslLinkDescriptor(source, destination, grdsl.diagram.providers.GrdslElementTypes.StudentDesiredDegreeProgram_4003, grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingFeatureModelFacetLinks_Student_SelectedCourses_4004(grdsl.Student source) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getSelectedCourses().iterator(); destinations.hasNext();) {
+		grdsl.Course destination = (grdsl.Course) destinations.next();
+		result.add(new grdsl.diagram.part.GrdslLinkDescriptor(source, destination, grdsl.diagram.providers.GrdslElementTypes.StudentSelectedCourses_4004, grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingFeatureModelFacetLinks_GraduationRequirement_RequiredCourses_4005(grdsl.GraduationRequirement source) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getRequiredCourses().iterator(); destinations.hasNext();) {
+		grdsl.Course destination = (grdsl.Course) destinations.next();
+		result.add(new grdsl.diagram.part.GrdslLinkDescriptor(source, destination, grdsl.diagram.providers.GrdslElementTypes.GraduationRequirementRequiredCourses_4005, grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingFeatureModelFacetLinks_Teacher_Courses_4006(grdsl.Teacher source) {
+	java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor> result = new java.util.LinkedList<grdsl.diagram.part.GrdslLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getCourses().iterator(); destinations.hasNext();) {
+		grdsl.Course destination = (grdsl.Course) destinations.next();
+		result.add(new grdsl.diagram.part.GrdslLinkDescriptor(source, destination, grdsl.diagram.providers.GrdslElementTypes.TeacherCourses_4006, grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<grdsl.diagram.part.GrdslNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return GrdslDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return GrdslDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return GrdslDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<grdsl.diagram.part.GrdslLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return GrdslDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Course Selection</h1>
+    <h2>Students</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Grade Level</th>
+            <th>Academic Interests</th>
+            <th>Desired Degree Program</th>
+            <th>Selected Courses</th>
+            <th>Completed Courses</th>
+        </tr>
+        [% for (s in Student.all) { %]
+        <tr>
+            <td>[%= s.name %]</td>
+            <td>[%= s.gradeLevel %]</td>
+            <td>[%= s.academicInterests %]</td>
+            <td>[%= s.desiredDegreeProgram.name %]</td>
+            <td>[%= s.selectedCourses.collect(c | c.name).join(", ") %]</td>
+            <td>[%= s.completedCourses.collect(c | c.name).join(", ") %]</td>
+        </tr>
+        [% } %]
+    </table>
+    <!-- Add similar tables for other model elements like DegreeProgram, Course, Department, Teacher, and GraduationRequirement -->
+</body>
+</html>

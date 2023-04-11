@@ -1,0 +1,22 @@
+<project name="epsilon-ant-tasks" default="transform" xmlns:epsilon="http://www.eclipse.org/epsilon/ant">
+
+    <target name="transform">
+        <!-- Execute the ETL transformation -->
+        <epsilon.etl src="/Users/roy/eclipse/epsilon-2-4/workspace/mode.courseselection/grdslTransformation.etl">
+            <model ref="sourceModel" />
+            <model ref="targetModel" />
+            <classpath refid="epsilon.classpath" />
+        </epsilon.etl>
+
+        <!-- Execute the EGL transformation -->
+        <epsilon.egl src="/Users/roy/eclipse/epsilon-2-4/workspace/mode.courseselection/courseselection.egl">
+            <model ref="targetModel" />
+            <target target="file.html" />
+            <classpath refid="epsilon.classpath" />
+        </epsilon.egl>
+    </target>
+
+    <!-- Define the source and target models -->
+    <epsilon.emf model="sourceModel" modelFile="/Users/roy/eclipse/epsilon-2-4/workspace/mode.courseselection/mycourseselection.model" metamodelFile="/Users/roy/eclipse/epsilon-2-4/workspace/mode.courseselection/courseselection.ecore" />
+    <epsilon.emf model="targetModel" modelFile="/Users/roy/eclipse/epsilon-2-4/workspace/mode.courseselection/target.model" metamodelFile="/Users/roy/eclipse/epsilon-2-4/workspace/mode.courseselection/target.ecore" />
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<CourseSelection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="grdsl" xmi:id="_VlczsNNgEe2t2pfgnDdWkA">
+  <student xmi:id="_ZNLvYNNgEe2t2pfgnDdWkA" name="Charlie" gradeLevel="9" desiredDegreeProgram="_YBFvsNNgEe2t2pfgnDdWkA" selectedCourses="_PYXgwNPsEe2Z9rx08ii4NA"/>
+  <degreePrograms xmi:id="_YBFvsNNgEe2t2pfgnDdWkA" name="Bachelor of Computer Science"/>
+  <allCourses xmi:id="_XwsjQNNgEe2t2pfgnDdWkA" courseID="CS101" name="Introduction to Programming" creditHours="3" parentCourse="_PYXgwNPsEe2Z9rx08ii4NA" teacher="_ZiFBUNNgEe2t2pfgnDdWkA"/>
+  <allCourses xmi:id="_PYXgwNPsEe2Z9rx08ii4NA" courseID="CS201" name="Data Structures" creditHours="4" prerequisites="_XwsjQNNgEe2t2pfgnDdWkA" teacher="_RufqoNPsEe2Z9rx08ii4NA" department="_YXrDsNNgEe2t2pfgnDdWkA"/>
+  <departments xmi:id="_YXrDsNNgEe2t2pfgnDdWkA" name="Computer Science"/>
+  <teachers xmi:id="_ZiFBUNNgEe2t2pfgnDdWkA" name="Alice" courses="_XwsjQNNgEe2t2pfgnDdWkA"/>
+  <teachers xmi:id="_RufqoNPsEe2Z9rx08ii4NA" name="Bob" courses="_PYXgwNPsEe2Z9rx08ii4NA"/>
+  <graduationRequirements xmi:id="_Y1F_gNNgEe2t2pfgnDdWkA" name="Core Courses" minimumCreditHours="30" requiredCourses="_XwsjQNNgEe2t2pfgnDdWkA _PYXgwNPsEe2Z9rx08ii4NA">
+    <requiredCourseCategories>MATH</requiredCourseCategories>
+    <requiredCourseCategories>SCIENCE</requiredCourseCategories>
+    <requiredCourseCategories>TECHNOLOGY</requiredCourseCategories>
+  </graduationRequirements>
+</CourseSelection>

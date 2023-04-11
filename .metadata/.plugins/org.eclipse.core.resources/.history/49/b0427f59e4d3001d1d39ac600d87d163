@@ -1,0 +1,6 @@
+context Student {
+	constraint ValidGradeLevel {
+        check: self.gradeLevel >= 1 and self.gradeLevel <= 12
+        message: "Grade level must be between 1 and 12"
+    }
+}

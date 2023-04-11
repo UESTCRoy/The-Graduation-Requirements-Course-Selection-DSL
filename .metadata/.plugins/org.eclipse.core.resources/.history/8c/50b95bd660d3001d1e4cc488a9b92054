@@ -1,0 +1,17 @@
+	/*
+ * 
+ */
+package grdsl.diagram.part;
+
+	/**
+ * @generated
+ */
+public class GrdslNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public GrdslNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

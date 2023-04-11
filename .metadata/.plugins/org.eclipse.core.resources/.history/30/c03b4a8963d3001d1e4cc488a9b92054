@@ -1,0 +1,90 @@
+@namespace(uri="grdsl", prefix="")
+@gmf
+package grdsl;
+
+@gmf.node(label = "name")
+class Course {
+	attr String courseID;
+	attr String name;
+	attr String description;
+	attr int creditHours;
+	@gmf.link(label="prerequisites", target.decoration="arrow")
+	ref Course[*]#parentCourse prerequisites;
+	ref Course[*]#prerequisites parentCourse;
+	ref Teacher teacher;
+	@gmf.link(label="belongTo", target.decoration="arrow")
+	ref Department department;
+}
+
+enum CourseCategory {
+	@gmf.label(value="Math")
+	MATH = 0;
+	@gmf.label(value="SCIENCE")
+	SCIENCE = 1;
+	@gmf.label(value="HUMANITIES")
+	HUMANITIES = 2;
+	@gmf.label(value="SOCIAL_STUDIES")
+	SOCIAL_STUDIES = 3;
+	@gmf.label(value="ARTS")
+	ARTS = 4;
+	@gmf.label(value="TECHNOLOGY")
+	TECHNOLOGY = 5;
+	@gmf.label(value="LANGUAGE")
+	LANGUAGE = 6;
+	@gmf.label(value="PHYSICAL_EDUCATION")
+	PHYSICAL_EDUCATION = 7;
+}
+
+@gmf.node(label = "name")
+class Student {
+	attr String name;
+	attr int gradeLevel;
+	attr String[*] academicInterests;
+	@gmf.link(label="desiredDegreeProgram", target.decoration="arrow")
+	ref DegreeProgram desiredDegreeProgram;
+	@gmf.link(label="selectedCourses", target.decoration="arrow")
+	ref Course[*] selectedCourses;
+}
+
+@gmf.node(label = "name")
+class DegreeProgram {
+	attr String name;
+	attr String description;
+	@gmf.compartment
+	val GraduationRequirement[*] graduationRequirements;
+}
+
+@gmf.node(label = "name")
+class GraduationRequirement {
+	attr String name;
+	attr int minimumCreditHours;
+	@gmf.link(label="requiredCourse", target.decoration="arrow")
+	ref Course[*] requiredCourses;
+	attr CourseCategory[*] requiredCourseCategories;
+}
+
+@gmf.node(label = "name")
+class Teacher {
+	attr String name;
+	@gmf.link(label="teach", target.decoration="arrow")
+	ref Course[*] courses;
+}
+
+@gmf.node(label = "name")
+class Department {
+	attr String name;
+	@gmf.compartment
+	val Course[*] courses;
+	@gmf.compartment
+	val Teacher[*] teachers;
+}
+
+@gmf.diagram
+class CourseSelection {
+	val Student[*] student;
+	val DegreeProgram[*] degreePrograms;
+	val Course[*] allCourses;
+	val Department[*] departments;
+	val Teacher[*] teachers;
+	val GraduationRequirement[*] graduationRequirements;
+}

@@ -1,0 +1,7 @@
+# Tracing options for the mode.courseselection.diagram plug-in
+
+# Common issues
+mode.courseselection.diagram/debug=false
+
+# Visual IDs
+mode.courseselection.diagram/debug/visualID=false

@@ -1,0 +1,344 @@
+/**
+ */
+package grdsl;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.emf.common.util.Enumerator;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the literals of the enumeration '<em><b>Course Category</b></em>',
+ * and utility methods for working with them.
+ * <!-- end-user-doc -->
+ * @see grdsl.GrdslPackage#getCourseCategory()
+ * @model
+ * @generated
+ */
+public enum CourseCategory implements Enumerator {
+	/**
+	 * The '<em><b>MATH</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MATH_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MATH(0, "MATH", "MATH"),
+
+	/**
+	 * The '<em><b>SCIENCE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SCIENCE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SCIENCE(1, "SCIENCE", "SCIENCE"),
+
+	/**
+	 * The '<em><b>HUMANITIES</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #HUMANITIES_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	HUMANITIES(2, "HUMANITIES", "HUMANITIES"),
+
+	/**
+	 * The '<em><b>SOCIAL STUDIES</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SOCIAL_STUDIES_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SOCIAL_STUDIES(3, "SOCIAL_STUDIES", "SOCIAL_STUDIES"),
+
+	/**
+	 * The '<em><b>ARTS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ARTS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ARTS(4, "ARTS", "ARTS"),
+
+	/**
+	 * The '<em><b>TECHNOLOGY</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TECHNOLOGY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	TECHNOLOGY(5, "TECHNOLOGY", "TECHNOLOGY"),
+
+	/**
+	 * The '<em><b>LANGUAGE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LANGUAGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LANGUAGE(6, "LANGUAGE", "LANGUAGE"),
+
+	/**
+	 * The '<em><b>PHYSICAL EDUCATION</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PHYSICAL_EDUCATION_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	PHYSICAL_EDUCATION(7, "PHYSICAL_EDUCATION", "PHYSICAL_EDUCATION");
+
+	/**
+	 * The '<em><b>MATH</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MATH
+	 * @model annotation="gmf.label value='Math'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MATH_VALUE = 0;
+
+	/**
+	 * The '<em><b>SCIENCE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SCIENCE
+	 * @model annotation="gmf.label value='SCIENCE'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SCIENCE_VALUE = 1;
+
+	/**
+	 * The '<em><b>HUMANITIES</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #HUMANITIES
+	 * @model annotation="gmf.label value='HUMANITIES'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int HUMANITIES_VALUE = 2;
+
+	/**
+	 * The '<em><b>SOCIAL STUDIES</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SOCIAL_STUDIES
+	 * @model annotation="gmf.label value='SOCIAL_STUDIES'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SOCIAL_STUDIES_VALUE = 3;
+
+	/**
+	 * The '<em><b>ARTS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ARTS
+	 * @model annotation="gmf.label value='ARTS'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ARTS_VALUE = 4;
+
+	/**
+	 * The '<em><b>TECHNOLOGY</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TECHNOLOGY
+	 * @model annotation="gmf.label value='TECHNOLOGY'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TECHNOLOGY_VALUE = 5;
+
+	/**
+	 * The '<em><b>LANGUAGE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LANGUAGE
+	 * @model annotation="gmf.label value='LANGUAGE'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LANGUAGE_VALUE = 6;
+
+	/**
+	 * The '<em><b>PHYSICAL EDUCATION</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PHYSICAL_EDUCATION
+	 * @model annotation="gmf.label value='PHYSICAL_EDUCATION'"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PHYSICAL_EDUCATION_VALUE = 7;
+
+	/**
+	 * An array of all the '<em><b>Course Category</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static final CourseCategory[] VALUES_ARRAY =
+		new CourseCategory[] {
+			MATH,
+			SCIENCE,
+			HUMANITIES,
+			SOCIAL_STUDIES,
+			ARTS,
+			TECHNOLOGY,
+			LANGUAGE,
+			PHYSICAL_EDUCATION,
+		};
+
+	/**
+	 * A public read-only list of all the '<em><b>Course Category</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<CourseCategory> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>Course Category</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static CourseCategory get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			CourseCategory result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Course Category</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static CourseCategory getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			CourseCategory result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Course Category</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static CourseCategory get(int value) {
+		switch (value) {
+			case MATH_VALUE: return MATH;
+			case SCIENCE_VALUE: return SCIENCE;
+			case HUMANITIES_VALUE: return HUMANITIES;
+			case SOCIAL_STUDIES_VALUE: return SOCIAL_STUDIES;
+			case ARTS_VALUE: return ARTS;
+			case TECHNOLOGY_VALUE: return TECHNOLOGY;
+			case LANGUAGE_VALUE: return LANGUAGE;
+			case PHYSICAL_EDUCATION_VALUE: return PHYSICAL_EDUCATION;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private CourseCategory(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+	  return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+	  return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLiteral() {
+	  return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+	
+} //CourseCategory

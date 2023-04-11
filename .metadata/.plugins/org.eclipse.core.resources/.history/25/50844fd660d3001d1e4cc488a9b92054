@@ -1,0 +1,113 @@
+/*
+ * 
+ */
+package grdsl.diagram.part;
+
+/**
+ * @generated
+ */
+public class GrdslElementChooserDialog extends org.eclipse.gmf.tooling.runtime.part.DefaultElementChooserDialog {
+
+		/**
+ * @generated
+ */
+	public GrdslElementChooserDialog(org.eclipse.swt.widgets.Shell parentShell, org.eclipse.gmf.runtime.notation.View view) {
+		this(parentShell, view, false);
+	}
+	
+	/**
+ * @generated
+ */
+	public GrdslElementChooserDialog(org.eclipse.swt.widgets.Shell parentShell, org.eclipse.gmf.runtime.notation.View view, boolean allowMultiSelection) {
+		super(parentShell, view, new GrdslElementChooserDialogContextImpl(allowMultiSelection));
+	}
+	
+	
+	/**
+ * @generated
+ */
+	private static class GrdslElementChooserDialogContextImpl implements org.eclipse.gmf.tooling.runtime.part.DefaultElementChooserDialog.Context {
+			
+			/**
+ * @generated
+ */
+	private static final String[] FILE_EXTENSIONS = new String[]{"grdsl"};
+
+	/**
+ * @generated
+ */
+	private final boolean myAllowMultiSelection;
+
+			
+			/**
+ * @generated
+ */
+	private GrdslElementChooserDialogContextImpl(boolean allowMultiSelection) {
+		myAllowMultiSelection = allowMultiSelection;
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public org.eclipse.emf.common.notify.AdapterFactory getAdapterFactory() {
+		return grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory();
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferenceHint() {
+		return grdsl.diagram.part.GrdslDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public String[] getFileExtesions() {
+		return FILE_EXTENSIONS.clone();
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public String getDialogTitle() {
+		return grdsl.diagram.part.Messages.GrdslElementChooserDialog_SelectModelElementTitle;
+	}
+
+			
+			/**
+ * @generated
+ */	@Override
+	public org.eclipse.jface.viewers.ITreeContentProvider getTreeContentProvider() {
+		return new 		 org.eclipse.ui.model.BaseWorkbenchContentProvider();
+	}
+
+			
+			/**
+ * @generated
+ */	public boolean allowMultiSelection() {
+		return myAllowMultiSelection;
+	}
+
+		
+		
+			
+	}
+	
+	}

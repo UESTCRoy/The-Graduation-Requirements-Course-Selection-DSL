@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package grdsl.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		grdsl.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+grdsl.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+grdsl.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+grdsl.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+grdsl.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

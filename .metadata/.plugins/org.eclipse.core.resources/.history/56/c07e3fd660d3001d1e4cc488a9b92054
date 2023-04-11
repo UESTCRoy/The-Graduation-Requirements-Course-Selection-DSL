@@ -1,0 +1,407 @@
+	/*
+ * 
+ */
+package grdsl.diagram.part;
+
+	/**
+ * This registry is used to determine which type of visual object should be
+ * created for the corresponding Diagram, Node, ChildNode or Link represented
+ * by a domain model object.
+ * 
+ * @generated
+ */
+public class GrdslVisualIDRegistry {
+
+		/**
+ * @generated
+ */
+	private static final String DEBUG_KEY = "mode.courseselection.diagram/debug/visualID";  //$NON-NLS-1$
+
+		/**
+ * @generated
+ */
+public static int getVisualID(org.eclipse.gmf.runtime.notation.View view) {
+	if (view instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+		if (grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID.equals(view.getType())) {
+			return grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID;
+		} else {
+			return -1;
+		}
+	}
+	return grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view.getType());
+}
+	
+		/**
+ * @generated
+ */
+public static String getModelID(org.eclipse.gmf.runtime.notation.View view) {
+	org.eclipse.gmf.runtime.notation.View diagram = view.getDiagram();
+	while (view != diagram) {
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut");  //$NON-NLS-1$
+		if (annotation != null) {
+			return (String) annotation.getDetails().get("modelID");  //$NON-NLS-1$
+		}
+		view = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+	}
+	return diagram != null ? diagram.getType() : null;
+}
+	
+		/**
+ * @generated
+ */
+public static int getVisualID(String type) {
+	try {
+		return Integer.parseInt(type);
+	} catch (NumberFormatException e) {
+		if (Boolean.TRUE.toString().equalsIgnoreCase(org.eclipse.core.runtime.Platform.getDebugOption(DEBUG_KEY))) {
+			grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Unable to parse view type as a visualID number: " + type);
+		}
+	}
+	return -1;
+}
+
+	/**
+ * @generated
+ */
+public static String getType(int visualID) {
+	return Integer.toString(visualID);
+}
+	
+		/**
+ * @generated
+ */
+public static int getDiagramVisualID(org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	if (grdsl.GrdslPackage.eINSTANCE.getCourseSelection().isSuperTypeOf(domainElement.eClass()) && isDiagram((grdsl.CourseSelection) domainElement)) {
+	return grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID;
+}
+	return -1;
+}
+	
+		/**
+ * @generated
+ */
+public static int getNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	String containerModelID = grdsl.diagram.part.GrdslVisualIDRegistry.getModelID(containerView);
+	if (!grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID.equals(containerModelID) && !"grdsl".equals(containerModelID)) {  //$NON-NLS-1$
+		return -1;
+	}
+	int containerVisualID;
+	if (grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID.equals(containerModelID)) {
+		containerVisualID = grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(containerView);
+	} else {
+		if (containerView instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			containerVisualID = grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID;		
+		} else {
+			return -1;
+		}
+	}
+	switch (containerVisualID) {
+			case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+	if (grdsl.GrdslPackage.eINSTANCE.getStudent().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID;
+}
+if (grdsl.GrdslPackage.eINSTANCE.getDegreeProgram().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID;
+}
+if (grdsl.GrdslPackage.eINSTANCE.getCourse().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID;
+}
+if (grdsl.GrdslPackage.eINSTANCE.getDepartment().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID;
+}
+if (grdsl.GrdslPackage.eINSTANCE.getTeacher().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID;
+}
+if (grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID;
+}
+	break;
+											case grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart.VISUAL_ID:
+	if (grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID;
+}
+	break;
+		case grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart.VISUAL_ID:
+	if (grdsl.GrdslPackage.eINSTANCE.getCourse().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID;
+}
+	break;
+		case grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart.VISUAL_ID:
+	if (grdsl.GrdslPackage.eINSTANCE.getTeacher().isSuperTypeOf(domainElement.eClass())) {
+	return grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID;
+}
+	break;
+		}
+	return -1;
+}
+	
+		/**
+ * @generated
+ */
+public static boolean canCreateNode(org.eclipse.gmf.runtime.notation.View containerView, int nodeVisualID) {
+	String containerModelID = grdsl.diagram.part.GrdslVisualIDRegistry.getModelID(containerView);
+	if (!grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID.equals(containerModelID) && !"grdsl".equals(containerModelID)) {  //$NON-NLS-1$
+		return false;
+	}
+	int containerVisualID;
+	if (grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID.equals(containerModelID)) {
+		containerVisualID = grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(containerView);
+	} else {
+		if (containerView instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			containerVisualID = grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID;		
+		} else {
+			return false;
+		}
+	}
+	switch (containerVisualID) {
+		case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.StudentNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.DegreeProgramNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.CourseNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.DepartmentNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.TeacherNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.GraduationRequirementNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.GraduationRequirementName2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.CourseName2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.TeacherName2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+		case grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.CoursePrerequisitesExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.CourseDepartmentExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.StudentDesiredDegreeProgramExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.StudentSelectedCoursesExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID:
+	if (grdsl.diagram.edit.parts.TeacherCoursesExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+	}
+	return false;
+}
+	
+		/**
+ * @generated
+ */
+public static int getLinkWithClassVisualID(org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+		return -1;
+}
+	
+				/**
+ * User can change implementation of this method to handle some specific
+ * situations not covered by default logic.
+ * 
+ * @generated
+ */
+private static boolean isDiagram(grdsl.CourseSelection element) {
+	return true;
+}
+	
+		
+	
+	/**
+ * @generated
+ */
+	public static boolean checkNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement, int candidate) {
+		if (candidate == -1){
+			//unrecognized id is always bad
+			return false;
+		}
+				int basic = getNodeVisualID(containerView, domainElement);
+		return basic == candidate;
+	}
+
+		/**
+ * @generated
+ */
+	public static boolean isCompartmentVisualID(int visualID) {
+					switch (visualID) {
+				case grdsl.diagram.edit.parts.DegreeProgramDegreeProgramGraduationRequirementsCompartmentEditPart.VISUAL_ID:case grdsl.diagram.edit.parts.DepartmentDepartmentCoursesCompartmentEditPart.VISUAL_ID:case grdsl.diagram.edit.parts.DepartmentDepartmentTeachersCompartmentEditPart.VISUAL_ID:
+					return true;
+				default:
+					break;
+			}
+				return false;
+	}
+
+		/**
+ * @generated
+ */
+	public static boolean isSemanticLeafVisualID(int visualID) {
+		switch (visualID) {
+						case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+				return false;
+									case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+				return true;
+									default:
+				break;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.structure.DiagramStructure TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.structure.DiagramStructure() {
+		/**
+ * @generated
+ */
+		@Override
+
+		public int getVisualID(org.eclipse.gmf.runtime.notation.View view) {
+			return grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public String getModelID(org.eclipse.gmf.runtime.notation.View view) {
+			return grdsl.diagram.part.GrdslVisualIDRegistry.getModelID(view);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public int getNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement) {
+			return grdsl.diagram.part.GrdslVisualIDRegistry.getNodeVisualID(containerView, domainElement);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean checkNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement, int candidate) {
+			return grdsl.diagram.part.GrdslVisualIDRegistry.checkNodeVisualID(containerView, domainElement, candidate);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isCompartmentVisualID(int visualID) {
+			return grdsl.diagram.part.GrdslVisualIDRegistry.isCompartmentVisualID(visualID);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isSemanticLeafVisualID(int visualID) {
+			return grdsl.diagram.part.GrdslVisualIDRegistry.isSemanticLeafVisualID(visualID);
+		}
+	};
+
+	}

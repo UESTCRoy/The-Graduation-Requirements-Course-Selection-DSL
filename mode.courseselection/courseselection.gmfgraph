@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="grdsl">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="CoursePrerequisitesFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="CourseDepartmentFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="StudentDesiredDegreeProgramFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="StudentSelectedCoursesFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="GraduationRequirementRequiredCoursesFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TeacherCoursesFigureTargetDecoration"/>
+    <descriptors name="CourseFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="CourseFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CourseLabelFigure" text="Course"/>
+      </actualFigure>
+      <accessors accessor="getFigureCourseLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="StudentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="StudentFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="StudentLabelFigure" text="Student"/>
+      </actualFigure>
+      <accessors accessor="getFigureStudentLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DegreeProgramFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DegreeProgramFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DegreeProgramLabelFigure" text="DegreeProgram">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="DegreeProgramGraduationRequirementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureDegreeProgramLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getDegreeProgramGraduationRequirementsCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="GraduationRequirementFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="GraduationRequirementFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="GraduationRequirementLabelFigure" text="GraduationRequirement"/>
+      </actualFigure>
+      <accessors accessor="getFigureGraduationRequirementLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TeacherFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TeacherFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TeacherLabelFigure" text="Teacher"/>
+      </actualFigure>
+      <accessors accessor="getFigureTeacherLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DepartmentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DepartmentFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DepartmentLabelFigure" text="Department">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="DepartmentCoursesCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="DepartmentTeachersCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureDepartmentLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors accessor="getDepartmentCoursesCompartmentFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors accessor="getDepartmentTeachersCompartmentFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="CoursePrerequisitesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CoursePrerequisitesFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="CoursePrerequisitesExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="CoursePrerequisitesExternalLabel" text="prerequisites"/>
+    </descriptors>
+    <descriptors name="CourseDepartmentFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CourseDepartmentFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="CourseDepartmentExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="CourseDepartmentExternalLabel" text="belongTo"/>
+    </descriptors>
+    <descriptors name="StudentDesiredDegreeProgramFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="StudentDesiredDegreeProgramFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="StudentDesiredDegreeProgramExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="StudentDesiredDegreeProgramExternalLabel" text="desiredDegreeProgram"/>
+    </descriptors>
+    <descriptors name="StudentSelectedCoursesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="StudentSelectedCoursesFigure" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="StudentSelectedCoursesExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="StudentSelectedCoursesExternalLabel" text="selectedCourses"/>
+    </descriptors>
+    <descriptors name="GraduationRequirementRequiredCoursesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GraduationRequirementRequiredCoursesFigure" targetDecoration="//@figures.0/@figures.4"/>
+    </descriptors>
+    <descriptors name="GraduationRequirementRequiredCoursesExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="GraduationRequirementRequiredCoursesExternalLabel" text="requiredCourse"/>
+    </descriptors>
+    <descriptors name="TeacherCoursesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TeacherCoursesFigure" targetDecoration="//@figures.0/@figures.5"/>
+    </descriptors>
+    <descriptors name="TeacherCoursesExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TeacherCoursesExternalLabel" text="teach"/>
+    </descriptors>
+  </figures>
+  <nodes name="Course" figure="CourseFigure"/>
+  <nodes name="Student" figure="StudentFigure"/>
+  <nodes name="DegreeProgram" figure="DegreeProgramFigure"/>
+  <nodes name="GraduationRequirement" figure="GraduationRequirementFigure"/>
+  <nodes name="Teacher" figure="TeacherFigure"/>
+  <nodes name="Department" figure="DepartmentFigure"/>
+  <connections name="CoursePrerequisites" figure="CoursePrerequisitesFigure"/>
+  <connections name="CourseDepartment" figure="CourseDepartmentFigure"/>
+  <connections name="StudentDesiredDegreeProgram" figure="StudentDesiredDegreeProgramFigure"/>
+  <connections name="StudentSelectedCourses" figure="StudentSelectedCoursesFigure"/>
+  <connections name="GraduationRequirementRequiredCourses" figure="GraduationRequirementRequiredCoursesFigure"/>
+  <connections name="TeacherCourses" figure="TeacherCoursesFigure"/>
+  <compartments name="DegreeProgramGraduationRequirementsCompartment" figure="DegreeProgramFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <compartments name="DepartmentCoursesCompartment" figure="DepartmentFigure" collapsible="true" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <compartments name="DepartmentTeachersCompartment" figure="DepartmentFigure" collapsible="true" accessor="//@figures.0/@descriptors.5/@accessors.2"/>
+  <labels name="CourseLabel" figure="CourseFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="StudentLabel" figure="StudentFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="DegreeProgramLabel" figure="DegreeProgramFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="GraduationRequirementLabel" figure="GraduationRequirementFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="TeacherLabel" figure="TeacherFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="DepartmentLabel" figure="DepartmentFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="CoursePrerequisitesExternalLabel" figure="CoursePrerequisitesExternalLabelFigure" elementIcon="false"/>
+  <labels name="CourseDepartmentExternalLabel" figure="CourseDepartmentExternalLabelFigure" elementIcon="false"/>
+  <labels name="StudentDesiredDegreeProgramExternalLabel" figure="StudentDesiredDegreeProgramExternalLabelFigure" elementIcon="false"/>
+  <labels name="StudentSelectedCoursesExternalLabel" figure="StudentSelectedCoursesExternalLabelFigure" elementIcon="false"/>
+  <labels name="GraduationRequirementRequiredCoursesExternalLabel" figure="GraduationRequirementRequiredCoursesExternalLabelFigure" elementIcon="false"/>
+  <labels name="TeacherCoursesExternalLabel" figure="TeacherCoursesExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

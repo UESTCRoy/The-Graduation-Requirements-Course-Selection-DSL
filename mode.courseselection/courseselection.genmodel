@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/mode.courseselection/src" modelPluginID="mode.courseselection"
+    modelName="Grdsl" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>courseselection.emf</foreignModel>
+  <genPackages prefix="Grdsl" disposableProviderFactory="true" ecorePackage="courseselection.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="courseselection.ecore#//CourseCategory">
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/MATH"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/SCIENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/HUMANITIES"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/SOCIAL_STUDIES"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/ARTS"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/TECHNOLOGY"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/LANGUAGE"/>
+      <genEnumLiterals ecoreEnumLiteral="courseselection.ecore#//CourseCategory/PHYSICAL_EDUCATION"/>
+    </genEnums>
+    <genClasses ecoreClass="courseselection.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Course/courseID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Course/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Course/creditHours"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Course/prerequisites"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Course/parentCourse"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Course/teacher"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Course/department"/>
+    </genClasses>
+    <genClasses ecoreClass="courseselection.ecore#//Student">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Student/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Student/gradeLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Student/academicInterests"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Student/desiredDegreeProgram"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Student/selectedCourses"/>
+    </genClasses>
+    <genClasses ecoreClass="courseselection.ecore#//DegreeProgram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//DegreeProgram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//DegreeProgram/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//DegreeProgram/graduationRequirements"/>
+    </genClasses>
+    <genClasses ecoreClass="courseselection.ecore#//GraduationRequirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//GraduationRequirement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//GraduationRequirement/minimumCreditHours"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//GraduationRequirement/requiredCourses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//GraduationRequirement/requiredCourseCategories"/>
+    </genClasses>
+    <genClasses ecoreClass="courseselection.ecore#//Teacher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Teacher/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference courseselection.ecore#//Teacher/courses"/>
+    </genClasses>
+    <genClasses ecoreClass="courseselection.ecore#//Department">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute courseselection.ecore#//Department/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//Department/courses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//Department/teachers"/>
+    </genClasses>
+    <genClasses ecoreClass="courseselection.ecore#//CourseSelection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//CourseSelection/student"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//CourseSelection/degreePrograms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//CourseSelection/allCourses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//CourseSelection/departments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//CourseSelection/teachers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference courseselection.ecore#//CourseSelection/graduationRequirements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

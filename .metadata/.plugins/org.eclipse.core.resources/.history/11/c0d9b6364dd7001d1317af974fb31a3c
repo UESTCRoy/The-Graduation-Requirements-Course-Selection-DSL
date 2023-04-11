@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CourseSelection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="grdsl">
+  <student desiredDegreeProgram="//@degreePrograms.0" selectedCourses="//@departments.0/@courses.1"/>
+  <degreePrograms>
+    <graduationRequirements requiredCourses="//@departments.0/@courses.1"/>
+  </degreePrograms>
+  <departments>
+    <courses parentCourse="//@departments.0/@courses.1"/>
+    <courses prerequisites="//@departments.0/@courses.0"/>
+    <teachers courses="//@departments.0/@courses.0"/>
+    <teachers courses="//@departments.0/@courses.1"/>
+  </departments>
+</CourseSelection>

@@ -1,0 +1,6 @@
+rule generateHTML {
+    transform s : grdsl!Student
+    template : "courseSelection2HTML.egl"
+    target: "output/courseSelection.html"
+    primary : true
+}

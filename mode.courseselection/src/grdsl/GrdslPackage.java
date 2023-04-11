@@ -1,0 +1,1258 @@
+/**
+ */
+package grdsl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see grdsl.GrdslFactory
+ * @model kind="package"
+ *        annotation="gmf"
+ * @generated
+ */
+public interface GrdslPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "grdsl";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "grdsl";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	GrdslPackage eINSTANCE = grdsl.impl.GrdslPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.CourseImpl <em>Course</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.CourseImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getCourse()
+	 * @generated
+	 */
+	int COURSE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Course ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__COURSE_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__DESCRIPTION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Credit Hours</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__CREDIT_HOURS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Prerequisites</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__PREREQUISITES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Parent Course</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__PARENT_COURSE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Teacher</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__TEACHER = 6;
+
+	/**
+	 * The feature id for the '<em><b>Department</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__DEPARTMENT = 7;
+
+	/**
+	 * The number of structural features of the '<em>Course</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_FEATURE_COUNT = 8;
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.StudentImpl <em>Student</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.StudentImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getStudent()
+	 * @generated
+	 */
+	int STUDENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STUDENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Grade Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STUDENT__GRADE_LEVEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Academic Interests</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STUDENT__ACADEMIC_INTERESTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Desired Degree Program</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STUDENT__DESIRED_DEGREE_PROGRAM = 3;
+
+	/**
+	 * The feature id for the '<em><b>Selected Courses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STUDENT__SELECTED_COURSES = 4;
+
+	/**
+	 * The number of structural features of the '<em>Student</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STUDENT_FEATURE_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.DegreeProgramImpl <em>Degree Program</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.DegreeProgramImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getDegreeProgram()
+	 * @generated
+	 */
+	int DEGREE_PROGRAM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEGREE_PROGRAM__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEGREE_PROGRAM__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Graduation Requirements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEGREE_PROGRAM__GRADUATION_REQUIREMENTS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Degree Program</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEGREE_PROGRAM_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.GraduationRequirementImpl <em>Graduation Requirement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.GraduationRequirementImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getGraduationRequirement()
+	 * @generated
+	 */
+	int GRADUATION_REQUIREMENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRADUATION_REQUIREMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Minimum Credit Hours</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRADUATION_REQUIREMENT__MINIMUM_CREDIT_HOURS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Required Courses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRADUATION_REQUIREMENT__REQUIRED_COURSES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Required Course Categories</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRADUATION_REQUIREMENT__REQUIRED_COURSE_CATEGORIES = 3;
+
+	/**
+	 * The number of structural features of the '<em>Graduation Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRADUATION_REQUIREMENT_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.TeacherImpl <em>Teacher</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.TeacherImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getTeacher()
+	 * @generated
+	 */
+	int TEACHER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Courses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER__COURSES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Teacher</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEACHER_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.DepartmentImpl <em>Department</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.DepartmentImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getDepartment()
+	 * @generated
+	 */
+	int DEPARTMENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPARTMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Courses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPARTMENT__COURSES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Teachers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPARTMENT__TEACHERS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Department</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPARTMENT_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link grdsl.impl.CourseSelectionImpl <em>Course Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.impl.CourseSelectionImpl
+	 * @see grdsl.impl.GrdslPackageImpl#getCourseSelection()
+	 * @generated
+	 */
+	int COURSE_SELECTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Student</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION__STUDENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Degree Programs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION__DEGREE_PROGRAMS = 1;
+
+	/**
+	 * The feature id for the '<em><b>All Courses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION__ALL_COURSES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Departments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION__DEPARTMENTS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Teachers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION__TEACHERS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Graduation Requirements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION__GRADUATION_REQUIREMENTS = 5;
+
+	/**
+	 * The number of structural features of the '<em>Course Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_SELECTION_FEATURE_COUNT = 6;
+
+	/**
+	 * The meta object id for the '{@link grdsl.CourseCategory <em>Course Category</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grdsl.CourseCategory
+	 * @see grdsl.impl.GrdslPackageImpl#getCourseCategory()
+	 * @generated
+	 */
+	int COURSE_CATEGORY = 7;
+
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.Course <em>Course</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Course</em>'.
+	 * @see grdsl.Course
+	 * @generated
+	 */
+	EClass getCourse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Course#getCourseID <em>Course ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Course ID</em>'.
+	 * @see grdsl.Course#getCourseID()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_CourseID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Course#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see grdsl.Course#getName()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Course#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see grdsl.Course#getDescription()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Course#getCreditHours <em>Credit Hours</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Credit Hours</em>'.
+	 * @see grdsl.Course#getCreditHours()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_CreditHours();
+
+	/**
+	 * Returns the meta object for the reference list '{@link grdsl.Course#getPrerequisites <em>Prerequisites</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Prerequisites</em>'.
+	 * @see grdsl.Course#getPrerequisites()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EReference getCourse_Prerequisites();
+
+	/**
+	 * Returns the meta object for the reference list '{@link grdsl.Course#getParentCourse <em>Parent Course</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Parent Course</em>'.
+	 * @see grdsl.Course#getParentCourse()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EReference getCourse_ParentCourse();
+
+	/**
+	 * Returns the meta object for the reference '{@link grdsl.Course#getTeacher <em>Teacher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Teacher</em>'.
+	 * @see grdsl.Course#getTeacher()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EReference getCourse_Teacher();
+
+	/**
+	 * Returns the meta object for the reference '{@link grdsl.Course#getDepartment <em>Department</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Department</em>'.
+	 * @see grdsl.Course#getDepartment()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EReference getCourse_Department();
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.Student <em>Student</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Student</em>'.
+	 * @see grdsl.Student
+	 * @generated
+	 */
+	EClass getStudent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Student#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see grdsl.Student#getName()
+	 * @see #getStudent()
+	 * @generated
+	 */
+	EAttribute getStudent_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Student#getGradeLevel <em>Grade Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Grade Level</em>'.
+	 * @see grdsl.Student#getGradeLevel()
+	 * @see #getStudent()
+	 * @generated
+	 */
+	EAttribute getStudent_GradeLevel();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link grdsl.Student#getAcademicInterests <em>Academic Interests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Academic Interests</em>'.
+	 * @see grdsl.Student#getAcademicInterests()
+	 * @see #getStudent()
+	 * @generated
+	 */
+	EAttribute getStudent_AcademicInterests();
+
+	/**
+	 * Returns the meta object for the reference '{@link grdsl.Student#getDesiredDegreeProgram <em>Desired Degree Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Desired Degree Program</em>'.
+	 * @see grdsl.Student#getDesiredDegreeProgram()
+	 * @see #getStudent()
+	 * @generated
+	 */
+	EReference getStudent_DesiredDegreeProgram();
+
+	/**
+	 * Returns the meta object for the reference list '{@link grdsl.Student#getSelectedCourses <em>Selected Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Selected Courses</em>'.
+	 * @see grdsl.Student#getSelectedCourses()
+	 * @see #getStudent()
+	 * @generated
+	 */
+	EReference getStudent_SelectedCourses();
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.DegreeProgram <em>Degree Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Degree Program</em>'.
+	 * @see grdsl.DegreeProgram
+	 * @generated
+	 */
+	EClass getDegreeProgram();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.DegreeProgram#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see grdsl.DegreeProgram#getName()
+	 * @see #getDegreeProgram()
+	 * @generated
+	 */
+	EAttribute getDegreeProgram_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.DegreeProgram#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see grdsl.DegreeProgram#getDescription()
+	 * @see #getDegreeProgram()
+	 * @generated
+	 */
+	EAttribute getDegreeProgram_Description();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.DegreeProgram#getGraduationRequirements <em>Graduation Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Graduation Requirements</em>'.
+	 * @see grdsl.DegreeProgram#getGraduationRequirements()
+	 * @see #getDegreeProgram()
+	 * @generated
+	 */
+	EReference getDegreeProgram_GraduationRequirements();
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.GraduationRequirement <em>Graduation Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Graduation Requirement</em>'.
+	 * @see grdsl.GraduationRequirement
+	 * @generated
+	 */
+	EClass getGraduationRequirement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.GraduationRequirement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see grdsl.GraduationRequirement#getName()
+	 * @see #getGraduationRequirement()
+	 * @generated
+	 */
+	EAttribute getGraduationRequirement_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.GraduationRequirement#getMinimumCreditHours <em>Minimum Credit Hours</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Minimum Credit Hours</em>'.
+	 * @see grdsl.GraduationRequirement#getMinimumCreditHours()
+	 * @see #getGraduationRequirement()
+	 * @generated
+	 */
+	EAttribute getGraduationRequirement_MinimumCreditHours();
+
+	/**
+	 * Returns the meta object for the reference list '{@link grdsl.GraduationRequirement#getRequiredCourses <em>Required Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Required Courses</em>'.
+	 * @see grdsl.GraduationRequirement#getRequiredCourses()
+	 * @see #getGraduationRequirement()
+	 * @generated
+	 */
+	EReference getGraduationRequirement_RequiredCourses();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link grdsl.GraduationRequirement#getRequiredCourseCategories <em>Required Course Categories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Required Course Categories</em>'.
+	 * @see grdsl.GraduationRequirement#getRequiredCourseCategories()
+	 * @see #getGraduationRequirement()
+	 * @generated
+	 */
+	EAttribute getGraduationRequirement_RequiredCourseCategories();
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.Teacher <em>Teacher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Teacher</em>'.
+	 * @see grdsl.Teacher
+	 * @generated
+	 */
+	EClass getTeacher();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Teacher#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see grdsl.Teacher#getName()
+	 * @see #getTeacher()
+	 * @generated
+	 */
+	EAttribute getTeacher_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link grdsl.Teacher#getCourses <em>Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Courses</em>'.
+	 * @see grdsl.Teacher#getCourses()
+	 * @see #getTeacher()
+	 * @generated
+	 */
+	EReference getTeacher_Courses();
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.Department <em>Department</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Department</em>'.
+	 * @see grdsl.Department
+	 * @generated
+	 */
+	EClass getDepartment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link grdsl.Department#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see grdsl.Department#getName()
+	 * @see #getDepartment()
+	 * @generated
+	 */
+	EAttribute getDepartment_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.Department#getCourses <em>Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Courses</em>'.
+	 * @see grdsl.Department#getCourses()
+	 * @see #getDepartment()
+	 * @generated
+	 */
+	EReference getDepartment_Courses();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.Department#getTeachers <em>Teachers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Teachers</em>'.
+	 * @see grdsl.Department#getTeachers()
+	 * @see #getDepartment()
+	 * @generated
+	 */
+	EReference getDepartment_Teachers();
+
+	/**
+	 * Returns the meta object for class '{@link grdsl.CourseSelection <em>Course Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Course Selection</em>'.
+	 * @see grdsl.CourseSelection
+	 * @generated
+	 */
+	EClass getCourseSelection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.CourseSelection#getStudent <em>Student</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Student</em>'.
+	 * @see grdsl.CourseSelection#getStudent()
+	 * @see #getCourseSelection()
+	 * @generated
+	 */
+	EReference getCourseSelection_Student();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.CourseSelection#getDegreePrograms <em>Degree Programs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Degree Programs</em>'.
+	 * @see grdsl.CourseSelection#getDegreePrograms()
+	 * @see #getCourseSelection()
+	 * @generated
+	 */
+	EReference getCourseSelection_DegreePrograms();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.CourseSelection#getAllCourses <em>All Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>All Courses</em>'.
+	 * @see grdsl.CourseSelection#getAllCourses()
+	 * @see #getCourseSelection()
+	 * @generated
+	 */
+	EReference getCourseSelection_AllCourses();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.CourseSelection#getDepartments <em>Departments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Departments</em>'.
+	 * @see grdsl.CourseSelection#getDepartments()
+	 * @see #getCourseSelection()
+	 * @generated
+	 */
+	EReference getCourseSelection_Departments();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.CourseSelection#getTeachers <em>Teachers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Teachers</em>'.
+	 * @see grdsl.CourseSelection#getTeachers()
+	 * @see #getCourseSelection()
+	 * @generated
+	 */
+	EReference getCourseSelection_Teachers();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link grdsl.CourseSelection#getGraduationRequirements <em>Graduation Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Graduation Requirements</em>'.
+	 * @see grdsl.CourseSelection#getGraduationRequirements()
+	 * @see #getCourseSelection()
+	 * @generated
+	 */
+	EReference getCourseSelection_GraduationRequirements();
+
+	/**
+	 * Returns the meta object for enum '{@link grdsl.CourseCategory <em>Course Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Course Category</em>'.
+	 * @see grdsl.CourseCategory
+	 * @generated
+	 */
+	EEnum getCourseCategory();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	GrdslFactory getGrdslFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.CourseImpl <em>Course</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.CourseImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getCourse()
+		 * @generated
+		 */
+		EClass COURSE = eINSTANCE.getCourse();
+
+		/**
+		 * The meta object literal for the '<em><b>Course ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__COURSE_ID = eINSTANCE.getCourse_CourseID();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__NAME = eINSTANCE.getCourse_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__DESCRIPTION = eINSTANCE.getCourse_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Credit Hours</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__CREDIT_HOURS = eINSTANCE.getCourse_CreditHours();
+
+		/**
+		 * The meta object literal for the '<em><b>Prerequisites</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE__PREREQUISITES = eINSTANCE.getCourse_Prerequisites();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent Course</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE__PARENT_COURSE = eINSTANCE.getCourse_ParentCourse();
+
+		/**
+		 * The meta object literal for the '<em><b>Teacher</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE__TEACHER = eINSTANCE.getCourse_Teacher();
+
+		/**
+		 * The meta object literal for the '<em><b>Department</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE__DEPARTMENT = eINSTANCE.getCourse_Department();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.StudentImpl <em>Student</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.StudentImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getStudent()
+		 * @generated
+		 */
+		EClass STUDENT = eINSTANCE.getStudent();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STUDENT__NAME = eINSTANCE.getStudent_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Grade Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STUDENT__GRADE_LEVEL = eINSTANCE.getStudent_GradeLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>Academic Interests</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STUDENT__ACADEMIC_INTERESTS = eINSTANCE.getStudent_AcademicInterests();
+
+		/**
+		 * The meta object literal for the '<em><b>Desired Degree Program</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STUDENT__DESIRED_DEGREE_PROGRAM = eINSTANCE.getStudent_DesiredDegreeProgram();
+
+		/**
+		 * The meta object literal for the '<em><b>Selected Courses</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STUDENT__SELECTED_COURSES = eINSTANCE.getStudent_SelectedCourses();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.DegreeProgramImpl <em>Degree Program</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.DegreeProgramImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getDegreeProgram()
+		 * @generated
+		 */
+		EClass DEGREE_PROGRAM = eINSTANCE.getDegreeProgram();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEGREE_PROGRAM__NAME = eINSTANCE.getDegreeProgram_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEGREE_PROGRAM__DESCRIPTION = eINSTANCE.getDegreeProgram_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Graduation Requirements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEGREE_PROGRAM__GRADUATION_REQUIREMENTS = eINSTANCE.getDegreeProgram_GraduationRequirements();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.GraduationRequirementImpl <em>Graduation Requirement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.GraduationRequirementImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getGraduationRequirement()
+		 * @generated
+		 */
+		EClass GRADUATION_REQUIREMENT = eINSTANCE.getGraduationRequirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GRADUATION_REQUIREMENT__NAME = eINSTANCE.getGraduationRequirement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Minimum Credit Hours</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GRADUATION_REQUIREMENT__MINIMUM_CREDIT_HOURS = eINSTANCE.getGraduationRequirement_MinimumCreditHours();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Courses</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GRADUATION_REQUIREMENT__REQUIRED_COURSES = eINSTANCE.getGraduationRequirement_RequiredCourses();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Course Categories</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GRADUATION_REQUIREMENT__REQUIRED_COURSE_CATEGORIES = eINSTANCE.getGraduationRequirement_RequiredCourseCategories();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.TeacherImpl <em>Teacher</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.TeacherImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getTeacher()
+		 * @generated
+		 */
+		EClass TEACHER = eINSTANCE.getTeacher();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEACHER__NAME = eINSTANCE.getTeacher_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Courses</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEACHER__COURSES = eINSTANCE.getTeacher_Courses();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.DepartmentImpl <em>Department</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.DepartmentImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getDepartment()
+		 * @generated
+		 */
+		EClass DEPARTMENT = eINSTANCE.getDepartment();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEPARTMENT__NAME = eINSTANCE.getDepartment_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Courses</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPARTMENT__COURSES = eINSTANCE.getDepartment_Courses();
+
+		/**
+		 * The meta object literal for the '<em><b>Teachers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPARTMENT__TEACHERS = eINSTANCE.getDepartment_Teachers();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.impl.CourseSelectionImpl <em>Course Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.impl.CourseSelectionImpl
+		 * @see grdsl.impl.GrdslPackageImpl#getCourseSelection()
+		 * @generated
+		 */
+		EClass COURSE_SELECTION = eINSTANCE.getCourseSelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Student</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_SELECTION__STUDENT = eINSTANCE.getCourseSelection_Student();
+
+		/**
+		 * The meta object literal for the '<em><b>Degree Programs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_SELECTION__DEGREE_PROGRAMS = eINSTANCE.getCourseSelection_DegreePrograms();
+
+		/**
+		 * The meta object literal for the '<em><b>All Courses</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_SELECTION__ALL_COURSES = eINSTANCE.getCourseSelection_AllCourses();
+
+		/**
+		 * The meta object literal for the '<em><b>Departments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_SELECTION__DEPARTMENTS = eINSTANCE.getCourseSelection_Departments();
+
+		/**
+		 * The meta object literal for the '<em><b>Teachers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_SELECTION__TEACHERS = eINSTANCE.getCourseSelection_Teachers();
+
+		/**
+		 * The meta object literal for the '<em><b>Graduation Requirements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_SELECTION__GRADUATION_REQUIREMENTS = eINSTANCE.getCourseSelection_GraduationRequirements();
+
+		/**
+		 * The meta object literal for the '{@link grdsl.CourseCategory <em>Course Category</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grdsl.CourseCategory
+		 * @see grdsl.impl.GrdslPackageImpl#getCourseCategory()
+		 * @generated
+		 */
+		EEnum COURSE_CATEGORY = eINSTANCE.getCourseCategory();
+
+	}
+
+} //GrdslPackage

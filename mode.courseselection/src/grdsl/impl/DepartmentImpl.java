@@ -1,0 +1,264 @@
+/**
+ */
+package grdsl.impl;
+
+import grdsl.Course;
+import grdsl.Department;
+import grdsl.GrdslPackage;
+import grdsl.Teacher;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Department</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link grdsl.impl.DepartmentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link grdsl.impl.DepartmentImpl#getCourses <em>Courses</em>}</li>
+ *   <li>{@link grdsl.impl.DepartmentImpl#getTeachers <em>Teachers</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DepartmentImpl extends EObjectImpl implements Department {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCourses() <em>Courses</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCourses()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Course> courses;
+
+	/**
+	 * The cached value of the '{@link #getTeachers() <em>Teachers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTeachers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Teacher> teachers;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DepartmentImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return GrdslPackage.Literals.DEPARTMENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GrdslPackage.DEPARTMENT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Course> getCourses() {
+		if (courses == null) {
+			courses = new EObjectContainmentEList<Course>(Course.class, this, GrdslPackage.DEPARTMENT__COURSES);
+		}
+		return courses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Teacher> getTeachers() {
+		if (teachers == null) {
+			teachers = new EObjectContainmentEList<Teacher>(Teacher.class, this, GrdslPackage.DEPARTMENT__TEACHERS);
+		}
+		return teachers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GrdslPackage.DEPARTMENT__COURSES:
+				return ((InternalEList<?>)getCourses()).basicRemove(otherEnd, msgs);
+			case GrdslPackage.DEPARTMENT__TEACHERS:
+				return ((InternalEList<?>)getTeachers()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case GrdslPackage.DEPARTMENT__NAME:
+				return getName();
+			case GrdslPackage.DEPARTMENT__COURSES:
+				return getCourses();
+			case GrdslPackage.DEPARTMENT__TEACHERS:
+				return getTeachers();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case GrdslPackage.DEPARTMENT__NAME:
+				setName((String)newValue);
+				return;
+			case GrdslPackage.DEPARTMENT__COURSES:
+				getCourses().clear();
+				getCourses().addAll((Collection<? extends Course>)newValue);
+				return;
+			case GrdslPackage.DEPARTMENT__TEACHERS:
+				getTeachers().clear();
+				getTeachers().addAll((Collection<? extends Teacher>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case GrdslPackage.DEPARTMENT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case GrdslPackage.DEPARTMENT__COURSES:
+				getCourses().clear();
+				return;
+			case GrdslPackage.DEPARTMENT__TEACHERS:
+				getTeachers().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case GrdslPackage.DEPARTMENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case GrdslPackage.DEPARTMENT__COURSES:
+				return courses != null && !courses.isEmpty();
+			case GrdslPackage.DEPARTMENT__TEACHERS:
+				return teachers != null && !teachers.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //DepartmentImpl

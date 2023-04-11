@@ -1,0 +1,423 @@
+	/*
+ * 
+ */
+package grdsl.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class GrdslNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof grdsl.diagram.navigator.GrdslNavigatorItem && !isOwnView(((grdsl.diagram.navigator.GrdslNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof grdsl.diagram.navigator.GrdslNavigatorGroup) {
+	grdsl.diagram.navigator.GrdslNavigatorGroup group = (grdsl.diagram.navigator.GrdslNavigatorGroup) element;
+	return grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof grdsl.diagram.navigator.GrdslNavigatorItem) {
+	grdsl.diagram.navigator.GrdslNavigatorItem navigatorItem = (grdsl.diagram.navigator.GrdslNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getImage(view);
+	}
+}
+
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+		case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?grdsl?CourseSelection", grdsl.diagram.providers.GrdslElementTypes.CourseSelection_1000); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?grdsl?Student", grdsl.diagram.providers.GrdslElementTypes.Student_2001); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?grdsl?DegreeProgram", grdsl.diagram.providers.GrdslElementTypes.DegreeProgram_2002); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?grdsl?Course", grdsl.diagram.providers.GrdslElementTypes.Course_2003); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?grdsl?Department", grdsl.diagram.providers.GrdslElementTypes.Department_2004); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?grdsl?Teacher", grdsl.diagram.providers.GrdslElementTypes.Teacher_2005); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?grdsl?GraduationRequirement", grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_2006); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?grdsl?GraduationRequirement", grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_3001); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?grdsl?Course", grdsl.diagram.providers.GrdslElementTypes.Course_3002); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?grdsl?Teacher", grdsl.diagram.providers.GrdslElementTypes.Teacher_3003); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?grdsl?Course?prerequisites", grdsl.diagram.providers.GrdslElementTypes.CoursePrerequisites_4001); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?grdsl?Course?department", grdsl.diagram.providers.GrdslElementTypes.CourseDepartment_4002); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?grdsl?Student?desiredDegreeProgram", grdsl.diagram.providers.GrdslElementTypes.StudentDesiredDegreeProgram_4003); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?grdsl?Student?selectedCourses", grdsl.diagram.providers.GrdslElementTypes.StudentSelectedCourses_4004); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?grdsl?GraduationRequirement?requiredCourses", grdsl.diagram.providers.GrdslElementTypes.GraduationRequirementRequiredCourses_4005); //$NON-NLS-1$
+case grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?grdsl?Teacher?courses", grdsl.diagram.providers.GrdslElementTypes.TeacherCourses_4006); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && grdsl.diagram.providers.GrdslElementTypes.isKnownElementType(elementType)) {
+		image = grdsl.diagram.providers.GrdslElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof grdsl.diagram.navigator.GrdslNavigatorGroup) {
+	grdsl.diagram.navigator.GrdslNavigatorGroup group = (grdsl.diagram.navigator.GrdslNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof grdsl.diagram.navigator.GrdslNavigatorItem) {
+	grdsl.diagram.navigator.GrdslNavigatorItem navigatorItem = (grdsl.diagram.navigator.GrdslNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getText(view);
+	}
+}
+
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view)) {
+		case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:
+	return getCourseSelection_1000Text(view);
+case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:
+	return getStudent_2001Text(view);
+case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:
+	return getDegreeProgram_2002Text(view);
+case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:
+	return getCourse_2003Text(view);
+case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:
+	return getDepartment_2004Text(view);
+case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:
+	return getTeacher_2005Text(view);
+case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:
+	return getGraduationRequirement_2006Text(view);
+case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:
+	return getGraduationRequirement_3001Text(view);
+case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:
+	return getCourse_3002Text(view);
+case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:
+	return getTeacher_3003Text(view);
+case grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID:
+	return getCoursePrerequisites_4001Text(view);
+case grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID:
+	return getCourseDepartment_4002Text(view);
+case grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID:
+	return getStudentDesiredDegreeProgram_4003Text(view);
+case grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID:
+	return getStudentSelectedCourses_4004Text(view);
+case grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID:
+	return getGraduationRequirementRequiredCourses_4005Text(view);
+case grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID:
+	return getTeacherCourses_4006Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getCourseSelection_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+					return "";  //$NON-NLS-1$
+	}
+	/**
+ * @generated
+ */
+private String getStudent_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.Student_2001, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.StudentNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDegreeProgram_2002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.DegreeProgram_2002, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.DegreeProgramNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCourse_2003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.Course_2003, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.CourseNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDepartment_2004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.Department_2004, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.DepartmentNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5007); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getTeacher_2005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.Teacher_2005, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.TeacherNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5008); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getGraduationRequirement_2006Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_2006, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.GraduationRequirementNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5009); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getGraduationRequirement_3001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_3001, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.GraduationRequirementName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCourse_3002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.Course_3002, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.CourseName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getTeacher_3003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.Teacher_3003, view.getElement() != null ? view.getElement() : view, grdsl.diagram.part.GrdslVisualIDRegistry.getType(grdsl.diagram.edit.parts.TeacherName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5006); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCoursePrerequisites_4001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.CoursePrerequisites_4001, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCourseDepartment_4002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.CourseDepartment_4002, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getStudentDesiredDegreeProgram_4003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.StudentDesiredDegreeProgram_4003, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getStudentSelectedCourses_4004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.StudentSelectedCourses_4004, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getGraduationRequirementRequiredCourses_4005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.GraduationRequirementRequiredCourses_4005, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getTeacherCourses_4006Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = grdsl.diagram.providers.GrdslParserProvider.getParser(grdsl.diagram.providers.GrdslElementTypes.TeacherCourses_4006, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6006); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return grdsl.diagram.edit.parts.CourseSelectionEditPart.MODEL_ID.equals(grdsl.diagram.part.GrdslVisualIDRegistry.getModelID(view));
+}
+
+	}

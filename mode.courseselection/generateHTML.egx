@@ -1,0 +1,5 @@
+rule generateHTML 
+    transform s : Student {
+        template : "courseSelection2HTML.egl"
+    	target: "output/courseSelection.html"
+    }

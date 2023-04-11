@@ -1,0 +1,29 @@
+	/*
+ * 
+ */
+package grdsl.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class DegreeProgramDegreeProgramGraduationRequirementsCompartmentItemSemanticEditPolicy extends grdsl.diagram.edit.policies.GrdslBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public DegreeProgramDegreeProgramGraduationRequirementsCompartmentItemSemanticEditPolicy() {
+				super(grdsl.diagram.providers.GrdslElementTypes.DegreeProgram_2002);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (grdsl.diagram.providers.GrdslElementTypes.GraduationRequirement_3001 == req.getElementType()) {
+	return getGEFWrapper(new grdsl.diagram.edit.commands.GraduationRequirement2CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

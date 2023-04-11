@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package grdsl.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class GrdslBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

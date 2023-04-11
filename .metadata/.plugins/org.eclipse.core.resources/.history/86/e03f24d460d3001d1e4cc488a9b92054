@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="grdsl" nsURI="grdsl" nsPrefix="">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Course">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="courseID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creditHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisites" upperBound="-1"
+        eType="#//Course" eOpposite="#//Course/parentCourse">
+      <eAnnotations source="gmf.link">
+        <details key="label" value="prerequisites"/>
+        <details key="target.decoration" value="arrow"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentCourse" upperBound="-1"
+        eType="#//Course" eOpposite="#//Course/prerequisites"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teacher" eType="#//Teacher"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="department" eType="#//Department">
+      <eAnnotations source="gmf.link">
+        <details key="label" value="belongTo"/>
+        <details key="target.decoration" value="arrow"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CourseCategory">
+    <eLiterals name="MATH">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="Math"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="SCIENCE" value="1">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="SCIENCE"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="HUMANITIES" value="2">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="HUMANITIES"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="SOCIAL_STUDIES" value="3">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="SOCIAL_STUDIES"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ARTS" value="4">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="ARTS"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="TECHNOLOGY" value="5">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="TECHNOLOGY"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="LANGUAGE" value="6">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="LANGUAGE"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="PHYSICAL_EDUCATION" value="7">
+      <eAnnotations source="gmf.label">
+        <details key="value" value="PHYSICAL_EDUCATION"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Student">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gradeLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="academicInterests" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="desiredDegreeProgram" eType="#//DegreeProgram">
+      <eAnnotations source="gmf.link">
+        <details key="label" value="desiredDegreeProgram"/>
+        <details key="target.decoration" value="arrow"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedCourses" upperBound="-1"
+        eType="#//Course">
+      <eAnnotations source="gmf.link">
+        <details key="label" value="selectedCourses"/>
+        <details key="target.decoration" value="arrow"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DegreeProgram">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graduationRequirements"
+        upperBound="-1" eType="#//GraduationRequirement" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraduationRequirement">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimumCreditHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredCourses" upperBound="-1"
+        eType="#//Course">
+      <eAnnotations source="gmf.link">
+        <details key="label" value="requiredCourse"/>
+        <details key="target.decoration" value="arrow"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredCourseCategories"
+        upperBound="-1" eType="#//CourseCategory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Teacher">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
+        eType="#//Course">
+      <eAnnotations source="gmf.link">
+        <details key="label" value="teach"/>
+        <details key="target.decoration" value="arrow"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Department">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
+        eType="#//Course" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teachers" upperBound="-1"
+        eType="#//Teacher" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CourseSelection">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" upperBound="-1"
+        eType="#//Student" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="degreePrograms" upperBound="-1"
+        eType="#//DegreeProgram" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allCourses" upperBound="-1"
+        eType="#//Course" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="departments" upperBound="-1"
+        eType="#//Department" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teachers" upperBound="-1"
+        eType="#//Teacher" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graduationRequirements"
+        upperBound="-1" eType="#//GraduationRequirement" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

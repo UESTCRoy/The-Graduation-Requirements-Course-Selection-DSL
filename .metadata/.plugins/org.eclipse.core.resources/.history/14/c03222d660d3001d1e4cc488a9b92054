@@ -1,0 +1,271 @@
+/*
+ * 
+ */
+package grdsl.diagram.providers;
+
+/**
+ * @generated
+ */
+public class GrdslElementTypes {
+
+		/**
+ * @generated
+ */
+private GrdslElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages elementTypeImages = new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages(	grdsl.diagram.part.GrdslDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CourseSelection_1000 = getElementType("mode.courseselection.diagram.CourseSelection_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Student_2001 = getElementType("mode.courseselection.diagram.Student_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DegreeProgram_2002 = getElementType("mode.courseselection.diagram.DegreeProgram_2002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Course_2003 = getElementType("mode.courseselection.diagram.Course_2003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Department_2004 = getElementType("mode.courseselection.diagram.Department_2004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Teacher_2005 = getElementType("mode.courseselection.diagram.Teacher_2005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType GraduationRequirement_2006 = getElementType("mode.courseselection.diagram.GraduationRequirement_2006");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType GraduationRequirement_3001 = getElementType("mode.courseselection.diagram.GraduationRequirement_3001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Course_3002 = getElementType("mode.courseselection.diagram.Course_3002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Teacher_3003 = getElementType("mode.courseselection.diagram.Teacher_3003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CoursePrerequisites_4001 = getElementType("mode.courseselection.diagram.CoursePrerequisites_4001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CourseDepartment_4002 = getElementType("mode.courseselection.diagram.CourseDepartment_4002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType StudentDesiredDegreeProgram_4003 = getElementType("mode.courseselection.diagram.StudentDesiredDegreeProgram_4003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType StudentSelectedCourses_4004 = getElementType("mode.courseselection.diagram.StudentSelectedCourses_4004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType GraduationRequirementRequiredCourses_4005 = getElementType("mode.courseselection.diagram.GraduationRequirementRequiredCourses_4005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType TeacherCourses_4006 = getElementType("mode.courseselection.diagram.TeacherCourses_4006");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImage(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImageDescriptor(getElement(hint));
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImage(getElement(hint));
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(CourseSelection_1000, grdsl.GrdslPackage.eINSTANCE.getCourseSelection());
+					
+	
+	elements.put(Student_2001, grdsl.GrdslPackage.eINSTANCE.getStudent());
+					
+	
+	elements.put(DegreeProgram_2002, grdsl.GrdslPackage.eINSTANCE.getDegreeProgram());
+					
+	
+	elements.put(Course_2003, grdsl.GrdslPackage.eINSTANCE.getCourse());
+					
+	
+	elements.put(Department_2004, grdsl.GrdslPackage.eINSTANCE.getDepartment());
+					
+	
+	elements.put(Teacher_2005, grdsl.GrdslPackage.eINSTANCE.getTeacher());
+					
+	
+	elements.put(GraduationRequirement_2006, grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement());
+					
+	
+	elements.put(GraduationRequirement_3001, grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement());
+					
+	
+	elements.put(Course_3002, grdsl.GrdslPackage.eINSTANCE.getCourse());
+					
+	
+	elements.put(Teacher_3003, grdsl.GrdslPackage.eINSTANCE.getTeacher());
+							
+	elements.put(CoursePrerequisites_4001, grdsl.GrdslPackage.eINSTANCE.getCourse_Prerequisites());
+					
+	elements.put(CourseDepartment_4002, grdsl.GrdslPackage.eINSTANCE.getCourse_Department());
+					
+	elements.put(StudentDesiredDegreeProgram_4003, grdsl.GrdslPackage.eINSTANCE.getStudent_DesiredDegreeProgram());
+					
+	elements.put(StudentSelectedCourses_4004, grdsl.GrdslPackage.eINSTANCE.getStudent_SelectedCourses());
+					
+	elements.put(GraduationRequirementRequiredCourses_4005, grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement_RequiredCourses());
+					
+	elements.put(TeacherCourses_4006, grdsl.GrdslPackage.eINSTANCE.getTeacher_Courses());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(CourseSelection_1000);
+		KNOWN_ELEMENT_TYPES.add(Student_2001);
+		KNOWN_ELEMENT_TYPES.add(DegreeProgram_2002);
+		KNOWN_ELEMENT_TYPES.add(Course_2003);
+		KNOWN_ELEMENT_TYPES.add(Department_2004);
+		KNOWN_ELEMENT_TYPES.add(Teacher_2005);
+		KNOWN_ELEMENT_TYPES.add(GraduationRequirement_2006);
+		KNOWN_ELEMENT_TYPES.add(GraduationRequirement_3001);
+		KNOWN_ELEMENT_TYPES.add(Course_3002);
+		KNOWN_ELEMENT_TYPES.add(Teacher_3003);
+		KNOWN_ELEMENT_TYPES.add(CoursePrerequisites_4001);
+		KNOWN_ELEMENT_TYPES.add(CourseDepartment_4002);
+		KNOWN_ELEMENT_TYPES.add(StudentDesiredDegreeProgram_4003);
+		KNOWN_ELEMENT_TYPES.add(StudentSelectedCourses_4004);
+		KNOWN_ELEMENT_TYPES.add(GraduationRequirementRequiredCourses_4005);
+		KNOWN_ELEMENT_TYPES.add(TeacherCourses_4006);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case grdsl.diagram.edit.parts.CourseSelectionEditPart.VISUAL_ID:		return CourseSelection_1000;
+	case grdsl.diagram.edit.parts.StudentEditPart.VISUAL_ID:		return Student_2001;
+	case grdsl.diagram.edit.parts.DegreeProgramEditPart.VISUAL_ID:		return DegreeProgram_2002;
+	case grdsl.diagram.edit.parts.CourseEditPart.VISUAL_ID:		return Course_2003;
+	case grdsl.diagram.edit.parts.DepartmentEditPart.VISUAL_ID:		return Department_2004;
+	case grdsl.diagram.edit.parts.TeacherEditPart.VISUAL_ID:		return Teacher_2005;
+	case grdsl.diagram.edit.parts.GraduationRequirementEditPart.VISUAL_ID:		return GraduationRequirement_2006;
+	case grdsl.diagram.edit.parts.GraduationRequirement2EditPart.VISUAL_ID:		return GraduationRequirement_3001;
+	case grdsl.diagram.edit.parts.Course2EditPart.VISUAL_ID:		return Course_3002;
+	case grdsl.diagram.edit.parts.Teacher2EditPart.VISUAL_ID:		return Teacher_3003;
+	case grdsl.diagram.edit.parts.CoursePrerequisitesEditPart.VISUAL_ID:		return CoursePrerequisites_4001;
+	case grdsl.diagram.edit.parts.CourseDepartmentEditPart.VISUAL_ID:		return CourseDepartment_4002;
+	case grdsl.diagram.edit.parts.StudentDesiredDegreeProgramEditPart.VISUAL_ID:		return StudentDesiredDegreeProgram_4003;
+	case grdsl.diagram.edit.parts.StudentSelectedCoursesEditPart.VISUAL_ID:		return StudentSelectedCourses_4004;
+	case grdsl.diagram.edit.parts.GraduationRequirementRequiredCoursesEditPart.VISUAL_ID:		return GraduationRequirementRequiredCourses_4005;
+	case grdsl.diagram.edit.parts.TeacherCoursesEditPart.VISUAL_ID:		return TeacherCourses_4006;
+		}
+		return null;
+	}
+	
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes TYPED_INSTANCE 
+		= new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes(elementTypeImages) {
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+			return grdsl.diagram.providers.GrdslElementTypes.isKnownElementType(elementType);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.gmf.runtime.emf.type.core.IElementType getElementTypeForVisualId(int visualID) {
+			return grdsl.diagram.providers.GrdslElementTypes.getElementType(visualID);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.emf.ecore.ENamedElement getDefiningNamedElement(org.eclipse.core.runtime.IAdaptable elementTypeAdapter) {
+			return grdsl.diagram.providers.GrdslElementTypes.getElement(elementTypeAdapter);
+		}
+	}; 
+
+	}

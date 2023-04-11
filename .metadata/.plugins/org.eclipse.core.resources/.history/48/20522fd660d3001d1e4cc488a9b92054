@@ -1,0 +1,290 @@
+/*
+ * 
+ */
+package grdsl.diagram.providers;
+
+/**
+ * @generated
+ */
+public class GrdslParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser studentName_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getStudentName_5001Parser() {
+		if (studentName_5001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getStudent_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								studentName_5001Parser = parser;
+		}
+		return studentName_5001Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser degreeProgramName_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDegreeProgramName_5003Parser() {
+		if (degreeProgramName_5003Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getDegreeProgram_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								degreeProgramName_5003Parser = parser;
+		}
+		return degreeProgramName_5003Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser courseName_5004Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCourseName_5004Parser() {
+		if (courseName_5004Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getCourse_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								courseName_5004Parser = parser;
+		}
+		return courseName_5004Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser departmentName_5007Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDepartmentName_5007Parser() {
+		if (departmentName_5007Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getDepartment_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								departmentName_5007Parser = parser;
+		}
+		return departmentName_5007Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser teacherName_5008Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTeacherName_5008Parser() {
+		if (teacherName_5008Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getTeacher_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								teacherName_5008Parser = parser;
+		}
+		return teacherName_5008Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser graduationRequirementName_5009Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getGraduationRequirementName_5009Parser() {
+		if (graduationRequirementName_5009Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								graduationRequirementName_5009Parser = parser;
+		}
+		return graduationRequirementName_5009Parser;
+	}
+
+
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser graduationRequirementName_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getGraduationRequirementName_5002Parser() {
+		if (graduationRequirementName_5002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getGraduationRequirement_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								graduationRequirementName_5002Parser = parser;
+		}
+		return graduationRequirementName_5002Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser courseName_5005Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCourseName_5005Parser() {
+		if (courseName_5005Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getCourse_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								courseName_5005Parser = parser;
+		}
+		return courseName_5005Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser teacherName_5006Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTeacherName_5006Parser() {
+		if (teacherName_5006Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				grdsl.GrdslPackage.eINSTANCE.getTeacher_Name()
+			};
+				grdsl.diagram.parsers.MessageFormatParser parser = new grdsl.diagram.parsers.MessageFormatParser(features);
+								teacherName_5006Parser = parser;
+		}
+		return teacherName_5006Parser;
+	}
+
+
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+				case grdsl.diagram.edit.parts.StudentNameEditPart.VISUAL_ID: return getStudentName_5001Parser();
+		case grdsl.diagram.edit.parts.DegreeProgramNameEditPart.VISUAL_ID: return getDegreeProgramName_5003Parser();
+		case grdsl.diagram.edit.parts.CourseNameEditPart.VISUAL_ID: return getCourseName_5004Parser();
+		case grdsl.diagram.edit.parts.DepartmentNameEditPart.VISUAL_ID: return getDepartmentName_5007Parser();
+		case grdsl.diagram.edit.parts.TeacherNameEditPart.VISUAL_ID: return getTeacherName_5008Parser();
+		case grdsl.diagram.edit.parts.GraduationRequirementNameEditPart.VISUAL_ID: return getGraduationRequirementName_5009Parser();
+				case grdsl.diagram.edit.parts.GraduationRequirementName2EditPart.VISUAL_ID: return getGraduationRequirementName_5002Parser();
+		case grdsl.diagram.edit.parts.CourseName2EditPart.VISUAL_ID: return getCourseName_5005Parser();
+		case grdsl.diagram.edit.parts.TeacherName2EditPart.VISUAL_ID: return getTeacherName_5006Parser();
+				}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(grdsl.diagram.part.GrdslVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (grdsl.diagram.providers.GrdslElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

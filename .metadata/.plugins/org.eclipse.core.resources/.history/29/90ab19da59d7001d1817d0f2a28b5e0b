@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<CourseSelection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="grdsl" xmi:id="_eDkr4NdYEe2udaVuLeZ6vw">
+  <student xmi:id="_gsDKANdYEe2udaVuLeZ6vw"/>
+  <degreePrograms xmi:id="_ft5fsNdYEe2udaVuLeZ6vw"/>
+  <allCourses xmi:id="_fHOhQNdYEe2udaVuLeZ6vw" courseID="CS101" name="Introduction to Programming" creditHours="3" parentCourse="_SRtx8NdZEe2udaVuLeZ6vw"/>
+  <allCourses xmi:id="_SRtx8NdZEe2udaVuLeZ6vw" courseID="CS201" name="Data Structures" creditHours="4" prerequisites="_fHOhQNdYEe2udaVuLeZ6vw"/>
+  <departments xmi:id="_gB6A0NdYEe2udaVuLeZ6vw" name="Computer Science"/>
+  <teachers xmi:id="_hE2rkNdYEe2udaVuLeZ6vw"/>
+  <graduationRequirements xmi:id="_gWXN4NdYEe2udaVuLeZ6vw"/>
+</CourseSelection>

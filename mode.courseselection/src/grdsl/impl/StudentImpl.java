@@ -1,0 +1,367 @@
+/**
+ */
+package grdsl.impl;
+
+import grdsl.Course;
+import grdsl.DegreeProgram;
+import grdsl.GrdslPackage;
+import grdsl.Student;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Student</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link grdsl.impl.StudentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link grdsl.impl.StudentImpl#getGradeLevel <em>Grade Level</em>}</li>
+ *   <li>{@link grdsl.impl.StudentImpl#getAcademicInterests <em>Academic Interests</em>}</li>
+ *   <li>{@link grdsl.impl.StudentImpl#getDesiredDegreeProgram <em>Desired Degree Program</em>}</li>
+ *   <li>{@link grdsl.impl.StudentImpl#getSelectedCourses <em>Selected Courses</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class StudentImpl extends EObjectImpl implements Student {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGradeLevel() <em>Grade Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGradeLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int GRADE_LEVEL_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getGradeLevel() <em>Grade Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGradeLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected int gradeLevel = GRADE_LEVEL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAcademicInterests() <em>Academic Interests</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAcademicInterests()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> academicInterests;
+
+	/**
+	 * The cached value of the '{@link #getDesiredDegreeProgram() <em>Desired Degree Program</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDesiredDegreeProgram()
+	 * @generated
+	 * @ordered
+	 */
+	protected DegreeProgram desiredDegreeProgram;
+
+	/**
+	 * The cached value of the '{@link #getSelectedCourses() <em>Selected Courses</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelectedCourses()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Course> selectedCourses;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StudentImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return GrdslPackage.Literals.STUDENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GrdslPackage.STUDENT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getGradeLevel() {
+		return gradeLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGradeLevel(int newGradeLevel) {
+		int oldGradeLevel = gradeLevel;
+		gradeLevel = newGradeLevel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GrdslPackage.STUDENT__GRADE_LEVEL, oldGradeLevel, gradeLevel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<String> getAcademicInterests() {
+		if (academicInterests == null) {
+			academicInterests = new EDataTypeUniqueEList<String>(String.class, this, GrdslPackage.STUDENT__ACADEMIC_INTERESTS);
+		}
+		return academicInterests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DegreeProgram getDesiredDegreeProgram() {
+		if (desiredDegreeProgram != null && desiredDegreeProgram.eIsProxy()) {
+			InternalEObject oldDesiredDegreeProgram = (InternalEObject)desiredDegreeProgram;
+			desiredDegreeProgram = (DegreeProgram)eResolveProxy(oldDesiredDegreeProgram);
+			if (desiredDegreeProgram != oldDesiredDegreeProgram) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GrdslPackage.STUDENT__DESIRED_DEGREE_PROGRAM, oldDesiredDegreeProgram, desiredDegreeProgram));
+			}
+		}
+		return desiredDegreeProgram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DegreeProgram basicGetDesiredDegreeProgram() {
+		return desiredDegreeProgram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDesiredDegreeProgram(DegreeProgram newDesiredDegreeProgram) {
+		DegreeProgram oldDesiredDegreeProgram = desiredDegreeProgram;
+		desiredDegreeProgram = newDesiredDegreeProgram;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GrdslPackage.STUDENT__DESIRED_DEGREE_PROGRAM, oldDesiredDegreeProgram, desiredDegreeProgram));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Course> getSelectedCourses() {
+		if (selectedCourses == null) {
+			selectedCourses = new EObjectResolvingEList<Course>(Course.class, this, GrdslPackage.STUDENT__SELECTED_COURSES);
+		}
+		return selectedCourses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case GrdslPackage.STUDENT__NAME:
+				return getName();
+			case GrdslPackage.STUDENT__GRADE_LEVEL:
+				return getGradeLevel();
+			case GrdslPackage.STUDENT__ACADEMIC_INTERESTS:
+				return getAcademicInterests();
+			case GrdslPackage.STUDENT__DESIRED_DEGREE_PROGRAM:
+				if (resolve) return getDesiredDegreeProgram();
+				return basicGetDesiredDegreeProgram();
+			case GrdslPackage.STUDENT__SELECTED_COURSES:
+				return getSelectedCourses();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case GrdslPackage.STUDENT__NAME:
+				setName((String)newValue);
+				return;
+			case GrdslPackage.STUDENT__GRADE_LEVEL:
+				setGradeLevel((Integer)newValue);
+				return;
+			case GrdslPackage.STUDENT__ACADEMIC_INTERESTS:
+				getAcademicInterests().clear();
+				getAcademicInterests().addAll((Collection<? extends String>)newValue);
+				return;
+			case GrdslPackage.STUDENT__DESIRED_DEGREE_PROGRAM:
+				setDesiredDegreeProgram((DegreeProgram)newValue);
+				return;
+			case GrdslPackage.STUDENT__SELECTED_COURSES:
+				getSelectedCourses().clear();
+				getSelectedCourses().addAll((Collection<? extends Course>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case GrdslPackage.STUDENT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case GrdslPackage.STUDENT__GRADE_LEVEL:
+				setGradeLevel(GRADE_LEVEL_EDEFAULT);
+				return;
+			case GrdslPackage.STUDENT__ACADEMIC_INTERESTS:
+				getAcademicInterests().clear();
+				return;
+			case GrdslPackage.STUDENT__DESIRED_DEGREE_PROGRAM:
+				setDesiredDegreeProgram((DegreeProgram)null);
+				return;
+			case GrdslPackage.STUDENT__SELECTED_COURSES:
+				getSelectedCourses().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case GrdslPackage.STUDENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case GrdslPackage.STUDENT__GRADE_LEVEL:
+				return gradeLevel != GRADE_LEVEL_EDEFAULT;
+			case GrdslPackage.STUDENT__ACADEMIC_INTERESTS:
+				return academicInterests != null && !academicInterests.isEmpty();
+			case GrdslPackage.STUDENT__DESIRED_DEGREE_PROGRAM:
+				return desiredDegreeProgram != null;
+			case GrdslPackage.STUDENT__SELECTED_COURSES:
+				return selectedCourses != null && !selectedCourses.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", gradeLevel: ");
+		result.append(gradeLevel);
+		result.append(", academicInterests: ");
+		result.append(academicInterests);
+		result.append(')');
+		return result.toString();
+	}
+
+} //StudentImpl

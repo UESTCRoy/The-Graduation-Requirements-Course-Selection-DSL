@@ -1,0 +1,62 @@
+@lazy
+pre {
+    var numCourses = Course.all.size();
+}
+
+context Student {
+    constraint ValidName {
+        check: self.name.trim().size() > 0
+        message: "Student name must not be empty"
+
+        fix {
+            title: "Set name to 'Unknown'"
+            do {
+                self.name = 'Unknown';
+            }
+        }
+    }
+}
+
+context Course {
+    @lazy
+    constraint TooManyPrerequisites {
+        guard: self.prerequisites.isNotEmpty()
+        
+        check {
+            var tooMany = self.prerequisites.size() > 5;
+            if (tooMany) {
+                println("Checking too many prerequisites for " + self.name);
+            }
+            return !tooMany;
+        }
+        
+        message: "A course cannot have more than 5 prerequisites"
+
+        fix removeExtraPrerequisites {
+            title: "Remove extra prerequisites"
+            do {
+                self.prerequisites.removeAll(self.prerequisites.subList(5, self.prerequisites.size()));
+            }
+        }
+
+        pre {
+            println("About to check too many prerequisites for " + self.name);
+        }
+
+        post {
+            println("Finished checking too many prerequisites for " + self.name);
+        }
+    }
+}
+
+context GraduationRequirement {
+    @lazy
+    constraint ValidRequirements {
+        check: self.requiredCourses.isNotEmpty() or self.requiredCourseCategories.isNotEmpty()
+        message: "A GraduationRequirement must have at least one required course or one required course category"
+    }
+}
+
+post {
+    ("# Courses="+numCourses).println();
+}
